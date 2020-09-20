@@ -27,7 +27,7 @@ public static void main(String[] args){
     System.out.println("there are roughly " + deathsYear + " deaths a year");   
     System.out.println("there are roughly " + immigrationYear + " new immigrants a year");
     System.out.println();
-    System.out.println("The current population is:" + pop[0]);
+    System.out.println("The current population is: " + pop[0]);
     System.out.println("The population " + year[1] + " year from now is: " + pop[1]);
     System.out.println("The population " + year[2] + " year from now is: " + pop[2]);
     System.out.println("The population " + year[3] + " year from now is: " + pop[3]);
