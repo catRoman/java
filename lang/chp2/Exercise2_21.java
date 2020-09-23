@@ -9,12 +9,18 @@ public class Exercise2_21 {
         System.out.print("Enter investment amount: ");
         double investmentAmount = input.nextDouble();
         System.out.print("Enter annual interest rate in percentage:");
-        double monthlyInterestRate = input.nextDouble();
+        double annualInterestRate = input.nextDouble();
         System.out.print("Enter the number of years: ");
         double years = input.nextDouble();
 
-        double value = investmentAmount * Math.pow((1 + monthlyInterestRate),(years * 12));
+double monthlyInterestRate = annualInterestRate/1200;
+double a = monthlyInterestRate + 1;
+double b = years * 12;
+        double value = investmentAmount * Math.pow(a,b);
+System.out.println(Math.pow(a,b));
+     
+value = ((int)(value * 10) + 0.5)/10;
 
-        System.out.println("Accumulated value is " + (int)value);
+System.out.println("Accumulated value is " + value);
     }
 }
