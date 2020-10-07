@@ -15,7 +15,7 @@ public class Exercise5_7{
             year = 
             totalCost += tuition;     
              System.out.printf("\t\t%1.2f\n", totalCost);
-        
+        this is a test
         }
         System.out.println();
         System.out.printf("The tuition after %d years will be %1.2f\n"
