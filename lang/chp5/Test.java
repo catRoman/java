@@ -1,31 +1,26 @@
+import java.util.Scanner;
 
-/*
-    Suppose that the tuition for a university
-    is $10,000 this year and increases 5% every year. In one year, the tuition
-    will be $10,500. Write a program that computes the tuition in ten years and
-    the total cost of four years’ worth of tuition after the tenth year.
-*/
+public class Test {
+    public static void main(String[] args) {
+        // Create a Scanner
+        Scanner input = new Scanner(System.in);
 
-public class Test{
-    public static void main(String[] args){
-        double tuition = 10000.0;
-        double yearlyIncreasePercentage = 0.05;
-        
-        double tuitionInTenYears = 0.0;
-        double fourYearsOfTuition = 0.0;
+        // Prompt the user to enter an integer
+        System.out.print("Enter an integer: ");
+        int number = input.nextInt();
+        int index = 2; // Numbers to test as factors
 
-        for (int i = 0; i < 14; i++){
-            tuition += tuition * yearlyIncreasePercentage; 
-            
-            if (i == 9)
-                tuitionInTenYears = tuition;
-
-            if (i == 10 || i == 11| i == 12 || i == 13)
-                fourYearsOfTuition += tuition;
+        // Find and display all the smallest factors in increasing order
+        while (number / index != 1) {
+            // Test as a factor of number
+            if (number % index == 0) {
+                System.out.print(index + ", ");
+                number /= index;
+            } else
+                index++; // Increment index
         }
-
-        System.out.printf("Tuition cost after 10 years is: $%.2f%n" + 
-            "Four years of tuition after 10 years is: $%.2f%n", 
-            tuitionInTenYears, fourYearsOfTuition);
+        System.out.println(number + ".");
     }
 }
+
+  
