@@ -18,7 +18,7 @@ public class Exercise5_32{
         int lottery = (lotteryDigit1 * 10) + lotteryDigit2;
         int guessDigit1 = guess / 10;
         int guessDigit2 = guess % 10;
-      
+                                                                                                 
         if (guess == lottery)
             System.out.println("Exact match: you win $10000");
         else if (guessDigit2 == lotteryDigit1
