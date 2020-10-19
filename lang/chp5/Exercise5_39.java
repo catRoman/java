@@ -1,32 +1,29 @@
+
+
 public class Exercise5_39{
     public static void main(String[] args){
-        double baseSalary = 5000;
-        double commission = 0;
-        double totalSales = 0;
-        double sales= 0.01;
+        
+        final int COMMISION_SOUGHT = 25000;
+        double saleTotal = 0.01;
+        double commision = 0;
+        do{
+            commision = 0;
+            if(saleTotal > 0 && saleTotal < 5000){
+                commision = (saleTotal * 0.08);
+            }
+            if(saleTotal > 5000 && saleTotal < 10000){
+                commision += ((saleTotal - 5000) * 0.10);
+            }
+            if(saleTotal > 10000){
+                commision += ((saleTotal - 10000) * 0.12);
+            }
+            saleTotal += 0.01;
+        } while(commision < COMMISION_SOUGHT);
 
-        for(int i =1; commission <= 30000; i++){
-            
-            commission = commissionRateFunction((double)sales);
-
-            totalSales = sales;
-            sales = sales + 0.01;
-        }
-      //  totalSales = (int)(Math.round(totalSales * 100)) / 100;
-        System.out.println("In order to make $30000 a year including your base salary "
-                            + "you would need to have a sales amount of $" + totalSales);
-    }
-
-    public static double commissionRateFunction(double amount){
-      double commission = 0;
-        if (amount > 0 && amount <= 5000)
-            commission = amount * 0.08;
-            
-        else if ( amount > 5000 && amount <= 10000)
-            commission = amount * 0.1;
-        else if ( amount > 10000)
-            commission = amount * 0.12;
-
-        return commission;
+        commision = (int)(Math.round(commision * 100)) / 100.0;
+        saleTotal = (int)(Math.round(saleTotal * 100)) / 100.0;
+        System.out.println("commision sought:" + COMMISION_SOUGHT);
+        System.out.println("commission: " + commision);
+        System.out.println("sales Total: " + saleTotal);
     }
 }
