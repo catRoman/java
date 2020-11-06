@@ -12,39 +12,80 @@ public class Exercise7_15{
     }
 
 public static int[] eliminateDuplicates(int[] list){
-    
+    int k = -1;
     int key = 0;
    int count =0;
    int totalCount = 0;
-    for(int i = 0; i < list.length; i++){
-       key = list[i];
-        for(int j = 1; j < list.length; j++){
-            if(key == list[j])
-                count++;
-            
-            
-        }
-        if(count == 1)
-        totalCount++;
-        count = 0;
+   int min = list[0];
+   int temp = 0;
+   System.out.println(totalCount);
+ 
+   /** 
+  for(int i = 0; i < list.length; i++){
+    for(int j =1; j < list.length; j++){
+    if(list[j] > list[i]){
+        temp = list[i];
+        list[i] = list[j];
+        list[j] = temp;
     }
+   }
+}
+   
+*/
+java.util.Arrays.sort(list);
+   System.out.println(java.util.Arrays.toString(list));
 
-    int[] newList = new int[totalCount];
-int k = 0;
     for(int i = 0; i < list.length; i++){
-        key = list[i];
-         for(int j = 1; j < list.length; j++){
-             if(key == list[j])
-                 count++;
+      System.out.print( list[i] +" * ");
+        for(int j = 0; j < list.length; j++){
+            if(list[j]== k)
+                continue;
+            else if(list[i] == list[j]){
+                System.out.print("!");
+                k = list[i];
+                count++;
+            }
+            System.out.print("&" + count + "^ ");
+             
+            
+            }
+            if(count == 1){
+                //totalCount -= count;
+                System.out.print("$");
+                totalCount++;   
+        }
+    count = 0; 
+    System.out.println(" " + totalCount);       
+    }
+    System.out.println(totalCount);
+   // int[] newList = new int[totalCount];
+  //  return newList;
+ 
+    int[] newList = new int[totalCount];
+k = -1;
+int l = 0;
+    for(int i = 0; i < list.length; i++){
+      
+         for(int j = 0; j < list.length; j++){
+             if(list[j]==k)
+             continue;
+            if(list[j] == list[i]){
+             newList[l] = list[j];  
+            k = list[j];  
+            l++; 
+            }
+            
+        
+
              
          } 
-         if(count == 1){
-            list[j] = newList[k];  
-            k++;
-         }
+    
+            
+         
      }
      return newList;
-}
+
+    }
 
 
 }
