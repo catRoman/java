@@ -33,31 +33,69 @@ falls into slots[2] .)
 
 import java.util.Scanner;
 
-public class Exercise7_20{
+public class Exercise7_21{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("How the number of balls to drop: ");
+        System.out.print("How the number of balls to drop: ");
         int balls = input.nextInt();
 
-        System.out.println("Enter the number of slots in the bean machine: ");
+        System.out.print("Enter the number of slots in the bean machine: ");
 
         int numSlots = input.nextInt();
         
-        beanMachineLogic(balls, numSlots);
+        System.out.println();
+       
+        beanMachine(balls, numSlots);
+        
 
     
     }
     public static void beanMachine(int balls, int numSlots){
         int[] slots = new int[numSlots];
+       
+        while(balls > 0){
         int rCount = 0;
         String choice = "";
-        for(int i = 1; i < numSlots -1; i++){
+        for(int i = 1; i <= numSlots -1; i++){
+           
             int random = (int)(Math.random() * 101);
+            if(random > 50){
+                rCount++;
+                choice += "R";
+            }else
+                choice += "L"; 
             
         }
-    
-    
+        
+        slots[rCount]++;
+        balls--;
+        
+        System.out.println(choice);
+        }
+
+        int maxNum = slots[0];
+        for(int i = 0; i < slots.length; i++){
+          if(maxNum < slots[i])
+            maxNum = slots[i];
+        }
+        int listNum = maxNum;
+        System.out.println();
+
+        for(int i = 0; i < maxNum; i++){
+            
+            for(int j = 0; j < slots.length; j++){
+                if(slots[j] >= listNum)
+                    System.out.print("0");
+                else
+                    System.out.print("*");
+            }
+            
+            listNum--;
+            System.out.println();
+        }
+     
+        
     }
 
     
