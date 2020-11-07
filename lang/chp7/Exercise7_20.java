@@ -26,20 +26,26 @@ public class Exercise7_20{
 
     public static void highLast(double[] list){
 
-        int currentMax = list.length-1;
+        
         double temp = 0;
 
-        for(int i = list.length-1; i >= 1; i--){
-            for(int j = list.length -2; j >= 0; j--){
-                if(list[currentMax] < list[j])
-                    currentMax = j;
-            if(currentMax != i){
-                temp = list[currentMax];
-                list[currentMax] = list[j];
-                list[j] = temp;
+        for(int i = list.length-1; i >= 0; i--){
+           
+            double currentMax = list[i];
+            int currentMaxIndex = i;
+            for(int j = i-1; j >= 0; j--){
+                if(currentMax < list[j]){
+                    
+                    currentMax = list[j];
+                    currentMaxIndex = j;
+                }
+            }
+            if(currentMaxIndex != i){
+                //temp = list[currentMax];
+                list[currentMaxIndex] = list[i];
+                list[i] = currentMax;
             }
             }    
         
         }
     }
-}
