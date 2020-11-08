@@ -1,3 +1,5 @@
+
+
 /**(Game: Eight Queens) The classic Eight Queens puzzle is to place eight queens
 on a chessboard such that no two queens can attack each other (i.e., no two queens
 are on the same row, same column, or same diagonal). There are many possible
@@ -22,56 +24,49 @@ public class Exercise7_22{
         java.util.Arrays.fill(usedColumns, -1);
 
         boolean[][] available = new boolean[8][8];
+        
         for(int i =0; i < available.length; i++)
-        java.util.Arrays.fill(available[i], true);
+            java.util.Arrays.fill(available[i], true);
         
-      
-
         
-        int[] row = new int[8];
-        int[] column = new int[8];
 
         for(int i = 0; i < 8; i++){
-            int position = availableRandomNumber(available, i);
-            row[i] = position;
-            System.out.print(position);
-            for(int j = 0; j < 8; j++){
-                
-                available[j][position]= false; // columns
-                 int t = position;
-                 int q = position;
+           // while(availableSpace(available[i])){
+                int position = availableRandomNumber(available, i);
+                System.out.print(position);
 
-                for(int k = j; k < 8; k++){
-                    
-                if(q < available[k].length){
-                    available[j][q] = false;
-                    q++;
+                for(int j = 0; j < 8; j++){
+                   available[j][position]= false; // columns
+                    diagonal(available,position, i, j);
                 }
-                if(t > 0 ){
-                    
-                    available[j][t] = false;
-                    t--;
-                }  
-            }
-                
-                   
-                }
-                
-           
-            
-           // if(column[position]){
-             //   available[position] = false;
-            //}
-
-           // chessBoardRow(i,row[i], available);
-           System.out.println();
-           System.out.println(java.util.Arrays.deepToString(available).replace("], ", "]\n"));
-           }
-            //column[position]=false;
-           
-           }
+                chessBoardRow(i,position, available);
         
+          
+                //System.out.println();
+            
+    }
+}
+    public static boolean availableSpace(boolean[] availableSpace){
+        boolean key = true;
+        for(int i =0; i < availableSpace.length; i++){
+            if(key == availableSpace[i])
+                return true;
+        }
+        return false;
+    } 
 
+    public static void diagonal(boolean[][] available, int position, int startingRow, int currentRow){
+    int rowChange = currentRow - startingRow;
+
+    if(rowChange > 0){
+        if((position + rowChange) < available[currentRow].length)
+        available[currentRow][position+rowChange]=false;
+        
+        if((position - rowChange) >= 0)
+        available[currentRow][position-rowChange]=false;
+    }
+    
+}
     public static int availableRandomNumber(boolean[][] available, int row){
        int number = -1;
       
