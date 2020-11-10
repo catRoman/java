@@ -27,8 +27,6 @@ public class Exercise7_27{
 
         displayResults(equals(inputs[0], inputs[1]));
 
-
-
     }
     public static void displayResults(boolean equals){
         if(equals)

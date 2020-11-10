@@ -3,8 +3,7 @@
 
 
 
-//tired of this question... its about a method to eliminate duplicates .. cant think straight will
-// move on to the next question and come back and do.
+
 
 import java.util.Scanner;
 import java.util.Arrays;
@@ -21,31 +20,30 @@ public class Exercise7_28{
         for(int i =0; i< list.length; i++){
             list[i] = input.nextInt();
         }
-/*
-        int count = 0;
-        for(int i = 0; i< list.length; i++){
-            for(int j= 0; j < list.length; j++){
-                if(list[i] == list[j] && i != j){
-                    count++;
-                    break;
-                }
-            }
-        }
-        int[] newList = new int[list.length-count];
 
-        for(int i = 0; i< list.length; i++){
-            for(int j= 0; j < list.length; j++){
-                if(list[i] == list[j] && i != j){
-                    break;
-                }else
-                    newList[i]=list[i];
-            }
-        } 
-*/
+        Arrays.sort(list);
+        int[] temp = new int[list.length];
+        int index = 0;
+
+        for(int i = 0; i < list.length -1; i++){ 
+                if(list[i] != list[i + 1])
+                    temp[index++] = list[i];
+        }
+
+        temp[index++] = list[list.length-1];
+
+        for(int i = 0; i < index; i++){ 
+            
+                list[i] = temp[i];
+    }
+
+    for (int i=0; i< index; i++) 
+    System.out.print(list[i]+" "); 
+
         System.out.println();
         System.out.println("The combination are: ");
-        for(int i = 0; i < list.length; i++){
-            for(int j = 0; j< list.length; j++){
+        for(int i = 0; i < index; i++){
+            for(int j = 0; j< index; j++){
                if(i !=j)
                 System.out.println(list[i] + " " + list[j]);
             }
