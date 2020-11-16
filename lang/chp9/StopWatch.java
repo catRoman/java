@@ -1,6 +1,8 @@
 /** =========================
  *         UML Diagram
  *  =========================
+ *          StopWatch
+ *  -------------------------
  *  - startTime : Long
  *  - endTime : Long
  *  -------------------------
@@ -13,7 +15,7 @@
  */
  
 
- public StopWatch{
+ public class StopWatch{
      private long startTime;
      private long endTime;
     
@@ -22,11 +24,11 @@
         
         startTime = System.currentTimeMillis();
      }
-     public void start(long startTime){
-         this.startTime = System.currentTimeMillis();
+     public void start(){
+         startTime = System.currentTimeMillis();
      }
-     public void stop(long endTime){
-        this.endTime = System.currentTimeMillis();
+     public void stop(){
+        endTime = System.currentTimeMillis();
      }
      public long getStartTime(){
         return startTime;
