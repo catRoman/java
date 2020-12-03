@@ -6,14 +6,16 @@ public class Exercise10_5{
         int posInt = input.nextInt();
 
         StackOfIntegers myStack = new StackOfIntegers();
-
-        for(int i = posInt-1; i >= 2; i--){
+        int i = 2;
+        while(i <= posInt){
             if(posInt % i == 0){
                 
                 myStack.push(i);
                 posInt = posInt / i;
-            }
+            }else
+                i++;
         }
+       
         int count = 5;
         while(!myStack.empty() && count > 0){
             System.out.print(myStack.pop() + " ");
