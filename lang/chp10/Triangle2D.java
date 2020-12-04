@@ -91,12 +91,34 @@
         }
     }
     public boolean overlaps(Triangle2D t){
-        if(this.contains(t.getP1()) || this.contains(t.getP2()) || this.contains(t.getP3())){
-            return true;
-        }else{
-            return false;
-        }
-    
+      // determine if rtraced rectangle around triangle
+      // intersects with each other
+
+      //This.Triangle2D
+      double t1_maxX = Math.max(this.getP1().getX(), Math.max(this.getP2().getX(), this.getP3().getX()));
+      double t1_minX = Math.min(this.getP1().getX(), Math.min(this.getP2().getX(), this.getP3().getX()));
+      double t1_maxY = Math.max(this.getP1().getY(), Math.max(this.getP2().getY(), this.getP3().getY()));
+      double t1_minY = Math.min(this.getP1().getY(), Math.min(this.getP2().getY(), this.getP3().getY()));
+
+      //t.Triangle2D
+      double t_maxX = Math.max(t.getP1().getX(), Math.max(t.getP2().getX(), t.getP3().getX()));
+      double t_minX = Math.min(t.getP1().getX(), Math.min(t.getP2().getX(), t.getP3().getX()));
+      double t_maxY = Math.max(t.getP1().getY(), Math.max(t.getP2().getY(), t.getP3().getY()));
+      double t_minY = Math.min(t.getP1().getY(), Math.min(t.getP2().getY(), t.getP3().getY()));
+
+      // check whether rectangles intersect
+
+      if(t1_minX > t_maxX || t_minX > t1_maxX){
+        return false;
+      }else if(t1_minY > t_maxY || t_minY > t1_maxY){
+          return false;
+      }
+
+      //check whether triangle is inside other triangle
+      if(this.contains(t))
+        return true;
+
+      
     }
         
 
