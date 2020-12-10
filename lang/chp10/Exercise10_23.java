@@ -16,6 +16,19 @@ public class Exercise10_23{
         System.out.println(test1.compare(t2));
             System.out.println(t1.compareTo(t2));
 
+        System.out.println(test1.subString(1));
+
+        System.out.println(test1.toUpperCase());
+
+        char[] test1c = test1.toChars();
+
+        for(int i = 0; i < test1c.length; i++){
+            System.out.print(test1c[i] + " , ");
+        }
+        System.out.println();
+        System.out.println(MyString2.valueOf(true));
+        System.out.println(MyString2.valueOf(false));
+
 
     }
 }

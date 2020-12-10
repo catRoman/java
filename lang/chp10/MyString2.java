@@ -4,6 +4,10 @@ String s;
     public MyString2(String s){
         this.s = s;
     }
+    @Override
+    public String toString(){
+        return this.s;
+    }
     public int compare(String s){
         
         if(this.s.length() < s.length()){
@@ -28,14 +32,32 @@ String s;
 
     }
     public MyString2 subString(int begin){
-       
-        
-            String neWstring
-            
-            for(int i = begin, j = 0; i <= end; i++, j++){
-                temp[j] = this.charAt(i);
-            }
-            return  new MyString1(temp);
-        
+        String newSubString = "";
+
+        for(int i = begin; i < this.s.length(); i++){
+            newSubString += "" + this.s.charAt(i);
+        }
+        return new MyString2(newSubString);
+    }
+    public MyString2 toUpperCase(){
+        String upperCase = "";
+        for(int i = 0; i < this.s.length(); i++){
+            upperCase += "" + Character.toUpperCase(this.s.charAt(i));
+        }
+        return new MyString2(upperCase);
+    }
+    public char[] toChars(){
+        char[] charArr = new char[this.s.length()];
+        for(int i = 0; i < this.s.length(); i++){
+            charArr[i] = this.s.charAt(i);
+        }
+        return charArr;
+    }
+    public static MyString2 valueOf(boolean b){
+        if(b)
+            return new MyString2("True");
+        else    
+            return new MyString2("False");
+
     }
 }
