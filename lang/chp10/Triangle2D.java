@@ -118,6 +118,10 @@
       if(this.contains(t))
         return true;
 
+      //check if two intersecting line segments exist 
+      // too lazy for figureing algorithm will come back
+      // need to retake linear algebra -- remminder  
+
       
     }
         

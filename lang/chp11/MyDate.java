@@ -13,6 +13,7 @@
  *  + getMonth() : int
  *  + getDay() : int
  *  + setDate(elapsedTime : long)
+ 
  */
 
 
@@ -59,4 +60,5 @@ import java.util.GregorianCalendar;
         day = myCal.get(GregorianCalendar.DAY_OF_MONTH);
 
      }
+   
  }
