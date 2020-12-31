@@ -60,5 +60,11 @@ import java.util.GregorianCalendar;
         day = myCal.get(GregorianCalendar.DAY_OF_MONTH);
 
      }
+
+     @Override
+     public String toString(){
+         return getDay() + "/" + getMonth() + "/" + getYear();
+
+     }
    
  }

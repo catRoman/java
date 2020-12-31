@@ -5,7 +5,12 @@
  * -salary: double
  * -dateHired : MyDate
  * +Employee()
- * +Employee(office : boolean, salary : double, dateHired : MyDate)
+ * +Employee(office : boolean, salary : double, 
+ *          dateHired : MyDate)
+ * +Employee(office : boolean, salary : double,
+ *           dateHired : MyDate, name : String,
+ *           address : String, email : String, 
+ *           phoneNumber : String)
  * +getOffice(): boolean
  * +getSalary(): double
  * +getDateHired(): MyDate
@@ -26,9 +31,19 @@
      public Employee(boolean office, double salary, MyDate dateHired){
          this.office = office;
          this.salary = salary;
-         MyDate temp = dateHired;
-         this.dateHired = temp;
+         this.dateHired = dateHired;
      }
+     public Employee(boolean office, double salary, 
+                     MyDate dateHired,
+                    String name, 
+                    String address, String email, 
+                    String phoneNumber){ 
+        super(name, address, email, phoneNumber);
+        this.office = office;
+        this.salary = salary;
+        this.dateHired = dateHired;
+
+    }
      public boolean getOffice(){
          return office;
      }
@@ -46,8 +61,7 @@
          this.salary = salary;
      }
      public void setDateHire(MyDate dateHired){
-         MyDate copy = dateHired;
-         this.dateHired = copy;
+         this.dateHired = dateHired;
      }
      @Override
      public String toString(){

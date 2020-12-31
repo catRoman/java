@@ -9,7 +9,7 @@
  *  - dateCreated : Date
  *  ------------------------
  *  + account()
- *  + account(int id, int balance)
+ *  + account(int id, double balance)
  *  + getId() : int id
  *  + setId(int id)
  *  + getBalance() : double balance
@@ -21,6 +21,7 @@
  *  + getMonthlyInterest() : double monthlyInterest
  *  + withdraw(double amount)
  *  + deposit(double ammount)
+ *  +toString()
  *  ==========================
  */
 
@@ -36,7 +37,7 @@ import java.util.Date;
     public Account(){
 
     }
-    public Account(int id, int balance){
+    public Account(int id, double balance){
         this.id = id;
         this.balance = balance;
     }
@@ -72,6 +73,14 @@ import java.util.Date;
     }
     public void deposit(double amount){
         this.balance += amount;
+    }
+    @Override
+    public String toString(){
+        return  "-------------------------------\n"
+                + "Account Id: " + getId()
+                + "\nDate Created: " + getDateCreated()
+                + "\nBalance: " + getBalance()
+                + "\n-------------------------------\n";
     }
 
  }
