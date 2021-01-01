@@ -7,11 +7,16 @@
  *  - balance : double
  *  - annualInterestRate : double
  *  - dateCreated : Date
+ *  - name : String
+ *  - transacations : ArrayList<Transaction>
  *  ------------------------
  *  + account()
  *  + account(int id, double balance)
  *  + getId() : int id
  *  + setId(int id)
+ *  + getName() : String
+ *  + setName(String name) : void
+ *  + getTransactions() : ArrayList<Transactions>
  *  + getBalance() : double balance
  *  + setBalance(double balance)
  *  + getAnnualInterestRate() : double annualInterestRate
@@ -26,13 +31,16 @@
  */
 
 import java.util.Date;
+import java.util.ArrayList;
 
  public class Account{
 
-    int id;
-    double balance;
-    double annualInterestRate;
-    Date dateCreated = new Date();
+    private int id;
+    private double balance;
+    private double annualInterestRate;
+    private Date dateCreated = new Date();
+    private String name;
+    private ArrayList<Transaction> transactions = new ArrayList<>();
 
     public Account(){
 
@@ -40,6 +48,16 @@ import java.util.Date;
     public Account(int id, double balance){
         this.id = id;
         this.balance = balance;
+    }
+    public Account(int id, double balance, String name){
+        this(id, balance);
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
     }
     public int getId(){
         return id;
@@ -70,14 +88,23 @@ import java.util.Date;
     }
     public void withdraw(double amount){
         this.balance -= amount; 
+        transactions.add(new Transaction('W',amount,getBalance(),"Withdrawal from Account #" + getId()));
     }
     public void deposit(double amount){
         this.balance += amount;
+        transactions.add(new Transaction('D',amount,getBalance(),"Deposited into Account #" + getId()));
+    }
+    public void printTransactions(){
+        for(Transaction e : transactions){
+            System.out.println(e.toString());
+        }
     }
     @Override
     public String toString(){
         return  "-------------------------------\n"
-                + "Account Id: " + getId()
+                + "Customer: " + getName()
+                + "\nAccount Id: " + getId()
+                + "\nAnnual Interest Rate: " + getAnnualInterestRate()
                 + "\nDate Created: " + getDateCreated()
                 + "\nBalance: " + getBalance()
                 + "\n-------------------------------\n";
