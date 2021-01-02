@@ -22,7 +22,7 @@ public class Exercise12_2{
             pass = false;
         }
         catch (InputMismatchException ex){
-            System.out.println("Incorrect input, try again...");
+            System.out.println("Incorrect input");
             System.out.println("Try again...");
             pass = true;
             input.nextLine();
