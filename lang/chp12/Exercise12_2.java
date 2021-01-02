@@ -1,3 +1,5 @@
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exercise12_2{
@@ -6,21 +8,29 @@ public class Exercise12_2{
 
         System.out.println("Enter two digits: ");
 
-        int[] number = new int[2];
+        int[] num = new int[2];
         boolean pass = false;
         do{
+       
         try{
+           
         for(int i = 0; i < 2; i++){
             num[i] = input.nextInt();
+            
+        }
+            
             pass = false;
         }
-        catch(InputMismatchException ex){
-            System.out.println(num[i] + " is not an integer.");
+        catch (InputMismatchException ex){
+            System.out.println("Incorrect input, try again...");
             System.out.println("Try again...");
             pass = true;
+            input.nextLine();
         }
-        }
+        
     }while(pass);
-    
+
+    System.out.println(num[0] + " + " + num[1] + " = "
+                         + (num[0]+num[1]));
     }
 }
