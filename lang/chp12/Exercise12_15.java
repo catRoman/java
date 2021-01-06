@@ -3,20 +3,21 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class Exercise12_15{
     public static void main(String[] args)
         throws IOException{
-        Scanner input = ne Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Enter name: ");
         String name = input.nextLine();
         boolean loop = true;
         File sourceFile;
-        String sourceLoacation;
+        String sourceLocation;
         do{
             System.out.println("Enter source file: ");
-            sourceLocation = input.nextLine()[
+            sourceLocation = input.nextLine();
             sourceFile = new File(sourceLocation);
             if(sourceFile.exists())
                 loop = false;
@@ -32,19 +33,30 @@ public class Exercise12_15{
                 System.out.println("File cannot be written to");
         }while(loop);
 
-
-    }public static int readInFile(String name, File file){
-        
+        writeInFile(name, sourceFile);
     }
-     public static int writeInFile(String name, File file){
-     }
-        try{
-           
-            PrintWriter output = new PrintWriter(sourceFile);
+    
+     public static int writeInFile(String name, File file) 
+        throws IOException{
+     ArrayList<String> nameList = new ArrayList<>();
 
-
+        try(
+           Scanner inputDoc = new Scanner(file);
+        )
+        {
+            while(inputDoc.hasNext()){
+                nameList.add(inputDoc.nextLine());     
+            }
+            nameList.add(name);
+            Collections.sort(nameList); 
         }
+        try(PrintWriter output = new PrintWriter(file))
+        {
+            for(String e : nameList){
+                output.println(e);
+            }
 
-        
+           return nameList.indexOf(name);
+        }  
         }
 }
