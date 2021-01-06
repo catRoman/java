@@ -20,7 +20,8 @@ public class Exercise12_17{
         boolean cont = false;
 
        do{
-       String word = myList.getRandomWord();
+      String word = myList.getRandomWord();
+      
        char geuss = ' ';
        String geusses = "";
        int missed = 0;
@@ -32,16 +33,13 @@ public class Exercise12_17{
         newWord[i] = '*';   
        }
        
-       System.out.println(newWord.toString());
-       System.out.println(word);
+       
        while(lettersLeft){
            currentWord = displayWord(newWord, geuss, word);
            System.out.print("(Geuss) Enter a letter in word " + currentWord + " --> ");
            geuss = input.next().charAt(0);
-           if(checkGeuss(geuss, word))
-                geusses += geuss;
-
-           if(correctGeuss == word.length()){
+          
+           if(checkFinished(displayWord(newWord, geuss, word))){
             System.out.println("The word is " + word + ". You missed "
                         + missed + " time.");
             lettersLeft = false;
@@ -49,23 +47,30 @@ public class Exercise12_17{
                missed++;
                System.out.println("\t" + geuss + " is not in the word");
            }else if(checkGeuss(geuss, word)){
-            if(geusses.indexOf(geuss) > 0 )   
+            if(checkGeuss(geuss, word))  { 
+            if(geusses.indexOf(geuss) > 0) 
                 System.out.println("\t" + geuss + " has already been chosen");
-            else
-                correctGeuss++;
            }
+        }
+           if(checkGeuss(geuss, word))
+           geusses += geuss;
+           
        }
+       
        boolean yOrN = false;
         do{
        System.out.print("Would you like to play again? ");
        int choice = input.next().charAt(0);
        
        
-       if(choice == 'y' || choice == 'Y')
+       if(choice == 'y' || choice == 'Y'){
             cont = true;
-        else if (choice == 'n' || choice == 'N')
+            yOrN = false;
+       }else if (choice == 'n' || choice == 'N'){
             cont = false;
-        else{
+            yOrN = false;
+            
+       }else{
             System.out.println("\tPlease use eith y/n for you answer...");
             yOrN = true;
         }
@@ -73,12 +78,19 @@ public class Exercise12_17{
     }while(cont);
     System.out.println("Goodbye");
 }
+public static boolean checkFinished(String currentWord){
+    for(int i = 0; i < currentWord.length(); i++){
+        if(currentWord.charAt(i) == '*')
+            return false;
+    }
+    return true;
+}
     public static String displayWord(char[] newWord, char geuss, String word){
    String displayedWord = "";
         if(checkGeuss(geuss, word)){
         
             for(int i = 0; i < newWord.length; i++){
-              if(word.indexOf(geuss) == i)
+              if(word.charAt(i) == geuss)
                // displayedWord = displayedWord.replace(displayedWord.charAt(i),geuss);
                newWord[i] = geuss;
         }
