@@ -41,23 +41,43 @@ public class Exercise12_18{
         for(int i = 0; i < srcRootFiles.size(); i++){
             fileContent.add(i,new ArrayList<String>());
         }
-        for(File e : srcRootFiles){
-            try(Scanner fileScan = new Scanner(e)){
-                for(int i = 0; i < srcRootFiles.size(); i++){
-                    for(int j= 0; fileScan.hasNext(); j++){
-                        fileContent.get(i).add(j,fileScan.nextLine());
+        for(int i = 0; i < srcRootFiles.size(); i++){
+            try(Scanner fileScan = new Scanner(srcRootFiles.get(i))){
+              //  for(int i = 0; i < srcRootFiles.size(); i++){
+                    while(fileScan.hasNext()){
+                        fileContent.get(i).add(fileScan.nextLine());
                     }
-                }
+               // }
             }
         }
+    
     for(int i = 0; i < srcRootFiles.size(); i++){
         System.out.println(srcRootFiles.get(i));
         System.out.println();
-        for(String f : fileContent.get(0)){
+        for(String f : fileContent.get(i)){
             System.out.println(f);
         }
         System.out.println();
     }
+    System.out.println("----------------------");
     
+    for(int i = 0; i < srcRootFiles.size(); i++){
+        try(PrintWriter packagePrint = new PrintWriter(srcRootFiles.get(i))){
+          //  for(int i = 0; i < srcRootFiles.size(); i++){
+                    fileContent.get(i).add(0, "package ");
+                    for(String e : fileContent.get(i))
+                        packagePrint.println(e);
+                
+           // }
+        }
+    }
+    for(int i = 0; i < srcRootFiles.size(); i++){
+        System.out.println(srcRootFiles.get(i));
+        System.out.println();
+        for(String f : fileContent.get(i)){
+            System.out.println(f);
+        }
+        System.out.println();
+    }
 }
 }
