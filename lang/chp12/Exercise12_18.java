@@ -12,72 +12,81 @@ public class Exercise12_18{
                 System.exit(1);
             }
 
+            File srcRootDirectory = new File(args[0]);
+            directoryExists(srcRootDirectory);
 
-           
+            File[] subDirectory = srcRootDirectory.listFiles();
 
-            File directoryLocation = new File(args[0]);
+            for(File e : subDirectory){
+                if(e.isDirectory())
+                    packageWriter(e, srcRootDirectory.getName());
+                    
+            }
+            
+
+        }
+public static void directoryExists(File directoryLocation)
+    throws IOException{
+           // File directoryLocation = new File(directory);
             
             if(!directoryLocation.exists()){
-                System.out.println(args[0] + " does not exist");
+                System.out.println(directoryLocation + " does not exist");
                 System.exit(1);
             }
 
             if(!directoryLocation.isDirectory()){
-                System.out.println(args[0] + " is not a directory");
+                System.out.println(directoryLocation + " is not a directory");
                 System.exit(2);
             }
+        }
+public static void packageWriter(File directoryLocation, String packageRoot)
+    throws IOException{
+
+        directoryExists(directoryLocation);
 
             ArrayList<File> srcRootFiles = new ArrayList<>();
             File[] fileList = directoryLocation.listFiles();
+            
+            //for just geting the chp num... not need just changed the package name to the 
+            //root folder name will adjust once i know more about packages
 
-            for(File e : fileList){
-                if(e.getName().contains(".java"))
-                srcRootFiles.add(e);
+            /**
+            String chpNumString = "";
+            for(int i = 0; i < directoryLocation.getName().length(); i++){
+                if(directoryLocation.getName().charAt(i) >= '0' &&
+                directoryLocation.getName().charAt(i) <= '9')
+                    chpNumString += directoryLocation.getName().charAt(i);
             }
-            
-            
+            int chpNum = Integer.parseInt(chpNumString);
+
+            */
+        for(File e : fileList){
+            if(e.getName().contains(".java"))
+                srcRootFiles.add(e);
+        }
+                
         ArrayList<ArrayList<String>> fileContent = new ArrayList<>();
         
         for(int i = 0; i < srcRootFiles.size(); i++){
             fileContent.add(i,new ArrayList<String>());
         }
+
         for(int i = 0; i < srcRootFiles.size(); i++){
             try(Scanner fileScan = new Scanner(srcRootFiles.get(i))){
-              //  for(int i = 0; i < srcRootFiles.size(); i++){
                     while(fileScan.hasNext()){
                         fileContent.get(i).add(fileScan.nextLine());
                     }
-               // }
+            }
+        }
+
+        for(int i = 0; i < srcRootFiles.size(); i++){
+            try(PrintWriter packagePrint = new PrintWriter(srcRootFiles.get(i))){
+                        fileContent.get(i).add(0, "package " + packageRoot + "/" + directoryLocation.getName() + ";");
+                        fileContent.get(i).add(1, "\n");
+                        for(String e : fileContent.get(i))
+                            packagePrint.println(e); 
             }
         }
     
-    for(int i = 0; i < srcRootFiles.size(); i++){
-        System.out.println(srcRootFiles.get(i));
-        System.out.println();
-        for(String f : fileContent.get(i)){
-            System.out.println(f);
-        }
-        System.out.println();
     }
-    System.out.println("----------------------");
-    
-    for(int i = 0; i < srcRootFiles.size(); i++){
-        try(PrintWriter packagePrint = new PrintWriter(srcRootFiles.get(i))){
-          //  for(int i = 0; i < srcRootFiles.size(); i++){
-                    fileContent.get(i).add(0, "package ");
-                    for(String e : fileContent.get(i))
-                        packagePrint.println(e);
-                
-           // }
-        }
-    }
-    for(int i = 0; i < srcRootFiles.size(); i++){
-        System.out.println(srcRootFiles.get(i));
-        System.out.println();
-        for(String f : fileContent.get(i)){
-            System.out.println(f);
-        }
-        System.out.println();
-    }
-}
 }
