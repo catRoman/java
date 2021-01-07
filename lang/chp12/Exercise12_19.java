@@ -18,15 +18,16 @@ public class Exercise12_19{
                 System.out.print("Enter authors name: ");
                 authorName = consoleInput.nextLine();
 
-                if(checkAuthor(authorName) < 0)
+                if(checkAuthor(authorName) == -1)
                     System.out.println("Author not found...");
-            }while(checkAuthor(authorName) < 0);
+            }while(checkAuthor(authorName) == -1);
 
   
             do{
+                String title;
                 while(true){
                     System.out.print("Enter title of book: ");
-                    String title = consoleInput.nextLine();
+                    title = consoleInput.nextLine();
                     
                     if(!titleExists(title)){
                         addTitle(checkAuthor(authorName), title);
@@ -37,11 +38,11 @@ public class Exercise12_19{
             } 
                 System.out.print("Would you like to add another title by the same author(y/n)? ");
             
-            }while(cont(consoleInput.next().charAt(0)));
+            }while(cont());
             
             System.out.print("Would you like to chose another author(y/n)? ");
 
-        }while(cont(consoleInput.next().charAt(0)));
+        }while(cont());
 
         System.out.println("Good-Bye");   
     }
@@ -56,7 +57,7 @@ public class Exercise12_19{
                 }
             }
             for(int i = 0; i < authorList.size(); i++){
-                if(author.toLowerCase().equals(authorList.get(i)))
+                if(author.equalsIgnoreCase(authorList.get(i)))
                     return i;
             }
             return -1;
@@ -73,7 +74,7 @@ public class Exercise12_19{
                     titleList.add(bookFileScan.nextLine());
                 }
             }
-            titleList.add(index + " " + title);
+            titleList.add((index + 1) + " " + title);
 
             try(PrintWriter printTitle = new PrintWriter("Books.txt")){
                 for(String e : titleList){
@@ -82,14 +83,17 @@ public class Exercise12_19{
             }
 
     }
-    public static boolean cont(char input){
+    public static boolean cont(){
+        Scanner inputCont = new Scanner(System.in);
+        char input;
         do{
+            input = inputCont.next().charAt(0);
         if(input == 'y' || input == 'Y'){
             return true;
-        }else if(input == 'n' || input == 'N'){
+        }else if(input == 'n' || input == 'N'){ 
             return false;
         }else{
-            System.out.println("please enter y or n");
+            System.out.print("Please enter y or n: ");
         }
     }while(true);
 
@@ -106,7 +110,7 @@ public class Exercise12_19{
                 }
             }
             for(String e : titleList){
-                if(title.equals(e))
+                if(e.substring(2).equalsIgnoreCase(title))   
                     return true;
             }
             return false;
