@@ -38,10 +38,18 @@ public class Exercise12_24{
     }
     public static double getSalary(int rankIndex){
        double salary =0;
+     
         switch(rankIndex){
-            case 0: salary = Math.random() * (80000 - 50000) + 50000;
-            case 1: salary = Math.random() * (110000 - 60000) + 60000;
-            case 2: salary = Math.random() * (130000 - 75000) + 75000;
+            case 0:{
+                
+                salary = (Math.random() * (80000 - 50000))+ 50000;
+            } 
+            case 1:{
+                salary = (Math.random() * (110000 - 60000)) + 60000;
+            } 
+            case 2:{
+                salary = (Math.random() * (130000 - 75000)) + 75000;
+            }
             
         }
         return Math.round(salary * 100)/100.0;
