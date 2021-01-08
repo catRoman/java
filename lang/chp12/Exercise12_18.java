@@ -7,21 +7,29 @@ import java.util.ArrayList;
 public class Exercise12_18{
     public static void main(String[] args)
         throws IOException{
-            if(args.length > 1){
+            if(args.length != 1){
                 System.out.println("Usage Error: java Exercise12_18 [srcRootDirectory]");
                 System.exit(1);
-            }
 
+            }
             File srcRootDirectory = new File(args[0]);
-            directoryExists(srcRootDirectory);
+            getWorking(srcRootDirectory);
+        }
+
+
+public static void getWorking(File srcRootDirectory)
+    throws IOException{
+            
+            //directoryExists(srcRootDirectory);
 
             File[] subDirectory = srcRootDirectory.listFiles();
 
-            for(File e : subDirectory){
-                if(e.isDirectory())
-                    packageWriter(e, srcRootDirectory.getName());
+            packageWriter(subDirectory);
+          //  for(File e : subDirectory){
+                
+           //         packageWriter(e);
                     
-            }
+           // }
             
 
         }
@@ -39,13 +47,12 @@ public static void directoryExists(File directoryLocation)
                 System.exit(2);
             }
         }
-public static void packageWriter(File directoryLocation, String packageRoot)
-    throws IOException{
-
-        directoryExists(directoryLocation);
+        public static void packageWriter(File[] fileList)
+            throws IOException{
+        //directoryExists(directoryLocation);
 
             ArrayList<File> srcRootFiles = new ArrayList<>();
-            File[] fileList = directoryLocation.listFiles();
+            //File[] fileList = directoryLocation.listFiles();
             
             //for just geting the chp num... not need just changed the package name to the 
             //root folder name will adjust once i know more about packages
@@ -53,7 +60,8 @@ public static void packageWriter(File directoryLocation, String packageRoot)
             /**
             String chpNumString = "";
             for(int i = 0; i < directoryLocation.getName().length(); i++){
-                if(directoryLocation.getName().charAt(i) >= '0' &&
+                if(directoryLocation.getName().n("Usage Error: java Exercise12_18 [srcRootDirectory]");
+                System.exit(1);charAt(i) >= '0' &&
                 directoryLocation.getName().charAt(i) <= '9')
                     chpNumString += directoryLocation.getName().charAt(i);
             }
@@ -61,8 +69,12 @@ public static void packageWriter(File directoryLocation, String packageRoot)
 
             */
         for(File e : fileList){
+            
             if(e.getName().contains(".java"))
                 srcRootFiles.add(e);
+            if(e.isDirectory())
+                getWorking(e);
+
         }
                 
         ArrayList<ArrayList<String>> fileContent = new ArrayList<>();
@@ -81,8 +93,8 @@ public static void packageWriter(File directoryLocation, String packageRoot)
 
         for(int i = 0; i < srcRootFiles.size(); i++){
             try(PrintWriter packagePrint = new PrintWriter(srcRootFiles.get(i))){
-                        fileContent.get(i).add(0, "package " + packageRoot + "/" + directoryLocation.getName() + ";");
-                        fileContent.get(i).add(1, "\n");
+                        fileContent.get(i).add(0, "package " + fileList[i].getParent() + ";");
+            
                         for(String e : fileContent.get(i))
                             packagePrint.println(e); 
             }
