@@ -1,0 +1,6 @@
+[submodule "coursera/unix_workbench/bookRepo/coursera/unix_workbench/bookRepo/the-unix-workbench"]
+	path = coursera/unix_workbench/bookRepo/coursera/unix_workbench/bookRepo/the-unix-workbench
+	url = https://github.com/seankross/the-unix-workbench.git
+[submodule "coursera/unix_workbench/bookRepo/the-unix-workbench"]
+	path = coursera/unix_workbench/bookRepo/the-unix-workbench
+	url = https://github.com/seankross/the-unix-workbench.git
