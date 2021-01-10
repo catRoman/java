@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Exercise12_20{
+public class RemovePackage{
     public static void main(String[] args){
         if(args.length != 1){
             System.out.println("Usage: java Exercise12_20 [srcRootFile]");
