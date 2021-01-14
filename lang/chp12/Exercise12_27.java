@@ -52,9 +52,16 @@ public class Exercise12_27{
                 return docContent;
             }
         public static ArrayList<String> searchAdjustFile(ArrayList<String> docContent){
-            
-            for(String e : searchAdjustFile){
-                if()
+           //Test1_1
+            Pattern one_one = Pattern.complie("[A-Z][a-z]+[0-9]_[0-9]");
+            //Test1_10
+            Pattern one_two = Pattern.compile("[A-Z]");
+
+
+            for(String e :  docContent){
+                while(matcher.find())[
+                    
+                ]
             }
         }
 }
