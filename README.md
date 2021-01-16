@@ -24,6 +24,6 @@ of code
 ```
 
 Here is how you make ([a link](https://www.wikipedia.org/)).
-![This is an image.](https://octodex.github.com/images/yaktocat.png0
+![This is an image.](https://octodex.github.com/images/yaktocat.png)
 
 nano README.md
