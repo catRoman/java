@@ -47,6 +47,11 @@ public class RegexTester{
                 fileInput(args);
                 break;
             }
+            case 'd':{
+                searchString(args[1], message(2, args));
+                displayCount(args[1], message(2, args));
+                break;
+            }
             default: {
                 throw new Exception("condition \'-" + condition + "\' not recognized");
             }
@@ -88,8 +93,7 @@ public class RegexTester{
         }
 
         if(!foundIt){
-            System.out.println(message + BLUE + " -> " + RESET + " No matches found for " + BLUE + regex + RESET
-                    + " in string");
+            System.out.println(message + BLUE + " -> " + RESET + " No matches found");
             return;
         }
    
@@ -158,4 +162,16 @@ public class RegexTester{
                 count++;
             }
         }
+    public static void displayCount(String regex, String message){
+        Matcher dm = Pattern.compile(regex).matcher(message);
+        System.out.println();
+        System.out.println("\tGroup count: " + RED + dm.groupCount() + RESET);
+        System.out.println("---------------------------------");
+      while(dm.find()){
+        for(int i =1; i <= dm.groupCount(); i++){
+            System.out.println(BLUE + i + RESET + ": " + dm.group(i) + " -> " + BLUE + dm.group(i).pattern() + RESET);
+        }
+    }
+    }
+    
 }
