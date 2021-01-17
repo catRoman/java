@@ -11,13 +11,13 @@ public class Exercise12_27{
         throws IOException{
             ArrayList<File> fileList = new ArrayList<>();
             ArrayList<ArrayList<String>> docContentList = new ArrayList<>();
-
-            for(int i = 0; i < args.list; i++){
+            ArrayList<String> currentContents;
+            for(int i = 0; i < args.length; i++){
                     fileList.add(new File(args[i]));
                     if(checkFile(fileList.get(i))){
                         docContentList.add(scanFile(fileList.get(i)));
-                        docContentList.get(i) = searchAdjustFile(docContentList.get(i));
-                        printToFile(docContentList, fileList.get(i));
+                        currentContents = searchAdjustFile(docContentList.get(i));
+                        printToFile(currentContents, fileList.get(i));
                         docContentList.remove(i);
                     }
             }
@@ -33,10 +33,10 @@ public class Exercise12_27{
                 System.out.println("Skipped: " + file + " is not in the format [*.java]");
                 return false;
             }else if(!file.canRead()){
-                System.out.pritnln("Error: cannot read " + file + " File skipped.");
+                System.out.println("Error: cannot read " + file + " File skipped.");
                 return false;
             }else if(!file.canWrite()){
-                System.out.pritnln("Error: cannot write to " + file + " File Skipped.");
+                System.out.println("Error: cannot write to " + file + " File Skipped.");
                 return false;
             }
             return true;
@@ -53,7 +53,7 @@ public class Exercise12_27{
             }
         public static ArrayList<String> searchAdjustFile(ArrayList<String> docContent){
            //Test1_1
-            Pattern one_one = Pattern.complie("[A-Z][a-z]+[0-9]_[0-9]");
+            Pattern one_one = Pattern.compile("[A-Z][a-z]+[0-9]_[0-9]");
             //Test1_10
             Pattern one_two = Pattern.compile("[A-Z]");
 
