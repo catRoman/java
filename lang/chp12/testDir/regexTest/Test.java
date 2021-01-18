@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public class Exercise12_27{
+public class Test{
     public static void main(String[] args)
         throws IOException{
             ArrayList<File> fileList = new ArrayList<>();
