@@ -19,7 +19,7 @@ public class Exercise12_33{
         int count =0;
         listOfPendingURLs.add(startingURL);
         while (!wordFound && !listOfPendingURLs.isEmpty() &&
-            listOfTraversedURLs.size() <= 100){
+            listOfTraversedURLs.size() <= 1000){
                 String urlString = listOfPendingURLs.remove(0);
                 wordFound = wordSearch(urlString, word);
                 if (!listOfTraversedURLs.contains(urlString)){
