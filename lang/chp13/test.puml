@@ -1,0 +1,43 @@
+@startuml
+scale 2
+skinparam ClassAttributeIconSize 0
+class Event {
+    +startTime: DateTime 
+    +venue: string 
+    +regeistrationCloaseL boolean 
+    -notifyAttendes()
+
+}
+class ApplicationUser {
+    -userName: string 
+    -password: string 
+    +isLocked: boolean 
+    -suggestReandomPassword()
+    +changeProfilePic()
+}
+class Speaker {
+    +openForSpeaking: boolean 
+    -callForAction() 
+    +applayAsSpokePerson()
+
+}
+class Topic {
+    +title: string 
+    +sourceCodeUrl: string
+    +downloadMaterials()
+}
+
+class Attendee {
+    +eventAttended: number 
+    -suggestEventBAsedOnPreference()
+    +registerForTicket()
+
+}
+
+ApplicationUser <|-- Speaker
+ApplicationUser <|-- Attendee
+Speaker "1" *-- "*" Topic
+Event "1" o-- "*" Speaker
+Event "1" o-- "*" Attendee
+
+@enduml

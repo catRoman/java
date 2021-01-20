@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="535px" preserveAspectRatio="none" style="width:302px;height:535px;" version="1.1" viewBox="0 0 302 535" width="302px" zoomAndPan="magnify"><defs><filter height="300%" id="f49alyoazss7q" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[14d61a16418e3a0c729cb0e55a924034]
+class GeometricObject--><rect codeLine="4" fill="#FEFECE" filter="url(#f49alyoazss7q)" height="214.4609" id="GeometricObject" style="stroke:#A80036;stroke-width:1.5;" width="281" x="7" y="7"/><ellipse cx="91.75" cy="23" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M91.8594,18.3438 L90.7031,23.4219 L93.0313,23.4219 L91.8594,18.3438 Z M90.375,16.1094 L93.3594,16.1094 L96.7188,28.5 L94.2656,28.5 L93.5,25.4375 L90.2188,25.4375 L89.4688,28.5 L87.0313,28.5 L90.375,16.1094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="103" x="112.25" y="27.1543">GeometricObject</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="287" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="74" x="13" y="53.2104">-color: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="13" y="66.0151">-filled: boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="13" y="78.8198">-dateCreated: java.util.Date</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="287" y1="85.4141" y2="85.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="13" y="99.6245">#GeometricObject()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="269" x="13" y="112.4292">#GeometricObject(color: string, filled: boolean)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="13" y="125.2339">+getColor(): String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="166" x="13" y="138.0386">+setColor(color: String): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="13" y="150.8433">+isFIlled(): boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="175" x="13" y="163.6479">+setFilled(filled: boolean): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="188" x="13" y="176.4526">+getDateCreated(): java.util.Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="13" y="189.2573">+toString(): String</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="108" x="13" y="202.062">+getArea(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="137" x="13" y="214.8667">+getPerimeter(): double</text><!--MD5=[40b067e448d061f8c1f714bff454de58]
+class Triangle--><rect codeLine="22" fill="#FEFECE" filter="url(#f49alyoazss7q)" height="240.0703" id="Triangle" style="stroke:#A80036;stroke-width:1.5;" width="273" x="11" y="281"/><ellipse cx="118.25" cy="297" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M121.2188,302.6406 Q120.6406,302.9375 120,303.0781 Q119.3594,303.2344 118.6563,303.2344 Q116.1563,303.2344 114.8281,301.5938 Q113.5156,299.9375 113.5156,296.8125 Q113.5156,293.6875 114.8281,292.0313 Q116.1563,290.375 118.6563,290.375 Q119.3594,290.375 120,290.5313 Q120.6563,290.6875 121.2188,290.9844 L121.2188,293.7031 Q120.5938,293.125 120,292.8594 Q119.4063,292.5781 118.7813,292.5781 Q117.4375,292.5781 116.75,293.6563 Q116.0625,294.7188 116.0625,296.8125 Q116.0625,298.9063 116.75,299.9844 Q117.4375,301.0469 118.7813,301.0469 Q119.4063,301.0469 120,300.7813 Q120.5938,300.5 121.2188,299.9219 L121.2188,302.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="50" x="138.75" y="301.1543">Triangle</text><line style="stroke:#A80036;stroke-width:1.5;" x1="12" x2="283" y1="313" y2="313"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="17" y="327.2104">-sideOne: double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="17" y="340.0151">-sideTwo: double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="17" y="352.8198">-sideThree: double</text><line style="stroke:#A80036;stroke-width:1.5;" x1="12" x2="283" y1="359.4141" y2="359.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="17" y="373.6245">+Triangle()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="17" y="386.4292">+Triangle(sideOne: double, sideTwo: double,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="49" y="399.2339">sideThree: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="17" y="412.0386">+Triangle(sideOne: double, sideTwo: double,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="184" x="49" y="424.8433">sideThree: double, color: string,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="49" y="437.6479">filled: boolean)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="17" y="450.4526">+getSideOne(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="17" y="463.2573">+getSideTwo(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="139" x="17" y="476.062">+getSideThree(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="17" y="488.8667">+setSideOne(sideOne: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="17" y="501.6714">+setSideTwo(sideTwo: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="196" x="17" y="514.4761">+setSideThree(sideThree: double)</text><!--MD5=[d72c78752a635b9cb15e2b3637264783]
+reverse link GeometricObject to Triangle--><path d="M147.5,241.48 C147.5,254.57 147.5,267.84 147.5,280.84 " fill="none" id="GeometricObject-backto-Triangle" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="140.5,241.12,147.5,221.12,154.5,241.12,140.5,241.12" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[43c7cc460de5735cb25a697e516a8498]
+@startuml
+
+skinparam ClassAttributeIconSize 0
+
+abstract GeometricObject {
+    -color: String
+    -filled: boolean
+    -dateCreated: java.util.Date
+
+    #GeometricObject()
+    #GeometricObject(color: string, filled: boolean)
+    +getColor(): String 
+    +setColor(color: String): void
+    +isFIlled(): boolean
+    +setFilled(filled: boolean): void
+    +getDateCreated(): java.util.Date
+    +toString(): String 
+    {abstract} +getArea(): double
+    {abstract} +getPerimeter(): double
+
+}
+
+class Triangle extends GeometricObject {
+    -sideOne: double
+    -sideTwo: double
+    -sideThree: double
+
+    +Triangle()
+    +Triangle(sideOne: double, sideTwo: double,\n\tsideThree: double)
+    +Triangle(sideOne: double, sideTwo: double, \n\tsideThree: double, color: string,\n\tfilled: boolean)
+    +getSideOne(): double
+    +getSideTwo(): double
+    +getSideThree(): double
+    +setSideOne(sideOne: double)
+    +setSideTwo(sideTwo: double)
+    +setSideThree(sideThree: double)
+}
+
+
+
+
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 01:36:27 PST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: CA
+--></g></svg>

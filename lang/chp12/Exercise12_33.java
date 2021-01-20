@@ -1,10 +1,13 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.PrintWriter;
+import java.io.IOException;
 import java.io.File;
+import java.io.FileWriter;
 
 public class Exercise12_33{
-    public static void main(String[] args){
+    public static void main(String[] args)
+        throws IOException{
         Scanner input = new Scanner(System.in);
         System.out.print("Enter URL: ");
         String url = input.nextLine();
@@ -12,28 +15,55 @@ public class Exercise12_33{
         String word = input.nextLine();
         crawler(url, word);
     }
-    public static void crawler(String startingURL, String word){
+    public static void crawler(String startingURL, String word)
+        throws IOException{
+        
+            File file = new File("crawlLog.txt");
+        
+        
+        try{
+        if(!file.exists())
+            file.createNewFile();
+        }catch(IOException ex){
+            System.out.println(ex);
+        }
+
+        
+        PrintWriter output = new PrintWriter(file);
+       
         ArrayList<String> listOfPendingURLs = new ArrayList<>();
         ArrayList<String> listOfTraversedURLs = new ArrayList<>();
         boolean wordFound = false;
         int count =0;
         listOfPendingURLs.add(startingURL);
         while (!wordFound && !listOfPendingURLs.isEmpty() &&
-            listOfTraversedURLs.size() <= 1000){
+            listOfTraversedURLs.size() <= 10000){
+                
                 String urlString = listOfPendingURLs.remove(0);
                 wordFound = wordSearch(urlString, word);
                 if (!listOfTraversedURLs.contains(urlString)){
                     listOfTraversedURLs.add(urlString);
                     
-                    System.out.println("Crawl " + count + " --> " + urlString);
-                    count++;
+                        if(wordSearch(urlString, word)){
+                            System.out.println(word + " FOUND on Crawl " + count + " ----> " + urlString);
+                            output.println(word + " FOUND on Crawl " + count + " ----> " + urlString);
+                            output.close();
+                           
+                        }else{
+                            System.out.println("Crawl " + count + " --> " + urlString);
+                            output.println("Crawl " + count + " --> " + urlString);
+                            
+                        }
+                        
+                        count++;
+                    }
                     for (String s : getSubURLs(urlString)) {
                         if (!listOfTraversedURLs.contains(s))
                             listOfPendingURLs.add(s);
                     }
                 }
             }
-    }
+    
     public static boolean wordSearch(String urlString, String word){
         
 
@@ -44,7 +74,6 @@ public class Exercise12_33{
                 String line = searchInput.nextLine();
                 if(line.toLowerCase().contains(word.toLowerCase())){
                     searchInput.close();
-                    System.out.println("\"" + word + "\" was found on --> " + urlString);
                     return true;
                 }
             }
@@ -57,17 +86,17 @@ public class Exercise12_33{
     }
     public static ArrayList<String> getSubURLs(String urlString) {
         ArrayList<String> list = new ArrayList<>();
-        File file = new File("htmlTest.txt");
+        
         
         try{
             java.net.URL url = new java.net.URL(urlString);
             Scanner input = new Scanner(url.openStream());
-            PrintWriter output = new PrintWriter(file);
+         
 
                 int current = 0;
                 while (input.hasNext()) {
                     String line = input.nextLine();
-                    output.println(line);
+                    
                     current = line.indexOf("http:", current);
                     while (current > 0){
                         int endIndex = line.indexOf("\"", current);
