@@ -1,14 +1,24 @@
-
+import javax.lang.model.util.ElementScanner14;
 
 /** chapter 13 Intro to Java by Liang Exercise 1 
- * Creating abstract classes and abstract method implementation
+ * 
+ * 
+ * Exercise13_1 - Creating abstract classes and abstract method implementation
+ * Exercise13_5 - Enable GeometricObject comparable
+ * Exercise13_6 - The ComparableCircle class
+ *      - commented out class implementation of Comparabale
+ *      - commented out max()
+ *      - commented out overriden compareTo()
  * 
  * @author Cat Roman 2020-01-20
- * 
- * @see Exercise13_1
  * @see Triangle
+ * @see Rectangle
+ * @see Circle
+ * @see ComparableCircle
 */
-public abstract class GeometricObject{
+public abstract class GeometricObject
+   // implements Comparable<GeometricObject>
+   {
     private String color = "white";
     private boolean filled = false;
     private java.util.Date dateCreated;
@@ -57,18 +67,53 @@ public abstract class GeometricObject{
         return this.dateCreated;
     }
 
-    /**Displays a string of parameters 
-     * @return a sequiential list of the objects properties
-    */
-    @Override
-    public String toString(){
-        return "Color: " + this.color + "\nFilled: " + this.filled; 
-    }
-
     /** @return Returns the area of the object dependant on its shape */
     public abstract double getArea();
 
     /** @return Returns the perimeter of an object dependant of its shape*/
     public abstract double getPerimeter();
+      
+    /** compares to Geometric objects area 
+     * @param o the object to be compared
+     * @param e anothe object to be compared
+     * @return returns the larger of the two object, if equal returns initial object 
+     *           
+    */
+/*
+    public static GeometricObject max(GeometricObject o, GeometricObject e){
+        if(o.compareTo(e) == 0)
+            return o;
+        else if(o.compareTo(e) > 0)
+            return o;
+        else
+            return e;
+    }
+*/
+    /**Compares area to determine overall size 
+     * 
+     * @see java.lang.Comparable
+     * @return 1 for greater than, 0 for equals, -1 for less than
+     */
+/*
+    @Override
+    public int compareTo(GeometricObject o){
+        if(this.getArea() > o.getArea())
+            return 1;
+        else if (this.getArea() == o.getArea())
+            return 0;
+        else 
+            return -1;
+    }
+*/
+    /**Displays a string of parameters 
+     * @return a sequiential list of the objects properties
+    */
+    @Override
+    public String toString(){
+        
+        return "\tColor: " + this.color + "\n\tFilled: " + this.filled
+                + "\n\tCreated on: " + this.dateCreated;
+        
+    }
 
 }

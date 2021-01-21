@@ -15,9 +15,9 @@ public class Triangle extends GeometricObject{
     public Triangle(){
     }
     
-    /**Constructs a Triangle with the supers default instances 
+    /**Constructs a Triangle with with defined instance variables 
      * 
-     * @param sideOne length of triangles side one in meters
+     * @param sideOne length of triangles side of one in meters
      * @param sideTwo length of triangles side two in meters
      * @param sideThree length of triangles side three in meters
     */
@@ -88,8 +88,8 @@ public class Triangle extends GeometricObject{
      */
     @Override
     public String toString(){
-        return "Triangle: \nSideOne: " + sideOne + "\nSideTwo: " + sideTwo
-                + "\nSideThree: " + sideThree + "\n" + super.toString();
+        return "Triangle: \n\tSideOne: " + sideOne + "\n\tSideTwo: " + sideTwo
+                + "\n\tSideThree: " + sideThree + "\n" + super.toString();
     }
 
     /** Compute the area of a triangle via Herons formula
@@ -100,7 +100,7 @@ public class Triangle extends GeometricObject{
      * 
      * @see GeometricObject
      * 
-     * @return the calculated area of the Triangle*/
+     * @return the calculated area in meters sqaured of the Triangle*/
     public double getArea(){
         double p = getPerimeter() / 2.0;
         return Math.sqrt(p * (p - this.sideOne) * (p - this.sideTwo) * (p - this.sideThree));

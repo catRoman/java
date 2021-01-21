@@ -1,0 +1,25 @@
+@startuml Exercise13_6
+
+skinparam ClassAttributeIconSize 0
+
+class Circle {
+    -radius: double
+
+    +Circle()
+    +Circle(radius: double)
+    +Circle(radius: double, color: String, filled: boolean)
+    +getRadius(): double
+    +setRadius(radius: double)
+}
+
+class ComparableCircle extends Circle implements java.lang.Comparable{
+    +ComparableCircle()
+    +ComparableCircle(radius: double)
+    +ComparableCircle(radius: double, color: String, filled: boolean)
+    
+}
+
+interface java.lang.Comparable {
+    +compareTo(o: Object): int
+}
+@enduml
