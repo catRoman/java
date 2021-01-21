@@ -1,0 +1,85 @@
+@startuml Exercise13_1-Exercise13_7
+
+skinparam ClassAttributeIconSize 0
+
+abstract GeometricObject implements java.lang.Comparable {
+    -color: String
+    -filled: boolean
+    -dateCreated: java.util.Date
+
+    #GeometricObject()
+    #GeometricObject(color: string, filled: boolean)
+    +getColor(): String 
+    +setColor(color: String): void
+    +isFIlled(): boolean
+    +setFilled(filled: boolean): void
+    +getDateCreated(): java.util.Date
+    +toString(): String 
+    {abstract} +getArea(): double
+    {abstract} +getPerimeter(): double
+    {static} +max(e: GeometricOnject, o: GeometricObject)
+
+
+}
+
+class Triangle extends GeometricObject {
+    -sideOne: double
+    -sideTwo: double
+    -sideThree: double
+
+    +Triangle()
+    +Triangle(sideOne: double, sideTwo: double,\n\tsideThree: double)
+    +Triangle(sideOne: double, sideTwo: double, \n\tsideThree: double, color: string,\n\tfilled: boolean)
+    +getSideOne(): double
+    +getSideTwo(): double
+    +getSideThree(): double
+    +setSideOne(sideOne: double)
+    +setSideTwo(sideTwo: double)
+    +setSideThree(sideThree: double)
+}
+
+Class Circle extends GeometricObject {
+    - radius: double
+
+    +Circle()
+    +Circle(radius: double)
+    +Circle(radius: double, color: String, filled: boolean)
+    +getRadius(): double
+    +setRadius(radius: double)
+
+}
+ Class Rectangle extends GeometricObject {
+     -length: double
+     -height: double
+
+     +Rectangle()
+     +Rectangle(lenght: double, height: double)
+     +Rectangle(length: double, height: double, color: String, filled: boolean)
+     +getLength(): double
+     +setLength(length: double)
+     +getHeight(): double
+     +setHeight(height: double)
+
+ }
+
+ class Square extends GeometricObject implements Colorable {
+     -sides 
+
+     +getSides()
+     +setSides()
+
+ }
+
+ interface Colorable {
+     {abstract} +howToColor()
+
+ }
+
+interface java.lang.Comparable {
+   +compareTo(o: GeometricObject): int
+}
+
+
+
+
+@enduml 
