@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="703px" preserveAspectRatio="none" style="width:1216px;height:703px;" version="1.1" viewBox="0 0 1216 703" width="1216px" zoomAndPan="magnify"><defs><filter height="300%" id="f8718q8d7jjf7" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[aa8f7b917213fcc1c2766e2d59b49067]
+cluster java.lang--><polygon fill="#FFFFFF" filter="url(#f8718q8d7jjf7)" points="306,6,381,6,388,28.2969,564,28.2969,564,118,306,118,306,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="306" x2="388" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="69" x="310" y="20.9951">java.lang</text><!--MD5=[008d82c49f85b4d489e041917c99c847]
+class java.lang.Comparable--><rect codeLine="77" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="60.8047" id="java.lang.Comparable" style="stroke:#A80036;stroke-width:1.5;" width="225" x="322.5" y="41"/><ellipse cx="393.25" cy="57" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M389.1719,52.7656 L389.1719,50.6094 L396.5625,50.6094 L396.5625,52.7656 L394.0938,52.7656 L394.0938,60.8438 L396.5625,60.8438 L396.5625,63 L389.1719,63 L389.1719,60.8438 L391.6406,60.8438 L391.6406,52.7656 L389.1719,52.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="75" x="413.75" y="61.1543">Comparable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="323.5" x2="546.5" y1="73" y2="73"/><line style="stroke:#A80036;stroke-width:1.5;" x1="323.5" x2="546.5" y1="81" y2="81"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="213" x="328.5" y="95.2104">+compareTo(o: GeometricObject): int</text><!--MD5=[14d61a16418e3a0c729cb0e55a924034]
+class GeometricObject--><rect codeLine="4" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="227.2656" id="GeometricObject" style="stroke:#A80036;stroke-width:1.5;" width="281" x="294.5" y="162"/><ellipse cx="379.25" cy="178" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M379.3594,173.3438 L378.2031,178.4219 L380.5313,178.4219 L379.3594,173.3438 Z M377.875,171.1094 L380.8594,171.1094 L384.2188,183.5 L381.7656,183.5 L381,180.4375 L377.7188,180.4375 L376.9688,183.5 L374.5313,183.5 L377.875,171.1094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="103" x="399.75" y="182.1543">GeometricObject</text><line style="stroke:#A80036;stroke-width:1.5;" x1="295.5" x2="574.5" y1="194" y2="194"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="74" x="300.5" y="208.2104">-color: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="300.5" y="221.0151">-filled: boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="300.5" y="233.8198">-dateCreated: java.util.Date</text><line style="stroke:#A80036;stroke-width:1.5;" x1="295.5" x2="574.5" y1="240.4141" y2="240.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="300.5" y="254.6245">#GeometricObject()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="269" x="300.5" y="267.4292">#GeometricObject(color: string, filled: boolean)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="300.5" y="280.2339">+getColor(): String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="166" x="300.5" y="293.0386">+setColor(color: String): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="300.5" y="305.8433">+isFIlled(): boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="175" x="300.5" y="318.6479">+setFilled(filled: boolean): void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="188" x="300.5" y="331.4526">+getDateCreated(): java.util.Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="300.5" y="344.2573">+toString(): String</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="108" x="300.5" y="357.062">+getArea(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="137" x="300.5" y="369.8667">+getPerimeter(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="269" x="300.5" y="382.6714">+max(e: GeometricOnject, o: GeometricObject)</text><!--MD5=[40b067e448d061f8c1f714bff454de58]
+class Triangle--><rect codeLine="24" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="240.0703" id="Triangle" style="stroke:#A80036;stroke-width:1.5;" width="273" x="129.5" y="449"/><ellipse cx="236.75" cy="465" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M239.7188,470.6406 Q239.1406,470.9375 238.5,471.0781 Q237.8594,471.2344 237.1563,471.2344 Q234.6563,471.2344 233.3281,469.5938 Q232.0156,467.9375 232.0156,464.8125 Q232.0156,461.6875 233.3281,460.0313 Q234.6563,458.375 237.1563,458.375 Q237.8594,458.375 238.5,458.5313 Q239.1563,458.6875 239.7188,458.9844 L239.7188,461.7031 Q239.0938,461.125 238.5,460.8594 Q237.9063,460.5781 237.2813,460.5781 Q235.9375,460.5781 235.25,461.6563 Q234.5625,462.7188 234.5625,464.8125 Q234.5625,466.9063 235.25,467.9844 Q235.9375,469.0469 237.2813,469.0469 Q237.9063,469.0469 238.5,468.7813 Q239.0938,468.5 239.7188,467.9219 L239.7188,470.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="50" x="257.25" y="469.1543">Triangle</text><line style="stroke:#A80036;stroke-width:1.5;" x1="130.5" x2="401.5" y1="481" y2="481"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="135.5" y="495.2104">-sideOne: double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="135.5" y="508.0151">-sideTwo: double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="135.5" y="520.8198">-sideThree: double</text><line style="stroke:#A80036;stroke-width:1.5;" x1="130.5" x2="401.5" y1="527.4141" y2="527.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="135.5" y="541.6245">+Triangle()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="135.5" y="554.4292">+Triangle(sideOne: double, sideTwo: double,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="167.5" y="567.2339">sideThree: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="135.5" y="580.0386">+Triangle(sideOne: double, sideTwo: double,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="184" x="167.5" y="592.8433">sideThree: double, color: string,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="167.5" y="605.6479">filled: boolean)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="135.5" y="618.4526">+getSideOne(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="135.5" y="631.2573">+getSideTwo(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="139" x="135.5" y="644.062">+getSideThree(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="135.5" y="656.8667">+setSideOne(sideOne: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="135.5" y="669.6714">+setSideTwo(sideTwo: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="196" x="135.5" y="682.4761">+setSideThree(sideThree: double)</text><!--MD5=[a7f9118cae7621dd25d25149752faef0]
+class Circle--><rect codeLine="40" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="124.8281" id="Circle" style="stroke:#A80036;stroke-width:1.5;" width="309" x="437.5" y="506.5"/><ellipse cx="570.75" cy="522.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M573.7188,528.1406 Q573.1406,528.4375 572.5,528.5781 Q571.8594,528.7344 571.1563,528.7344 Q568.6563,528.7344 567.3281,527.0938 Q566.0156,525.4375 566.0156,522.3125 Q566.0156,519.1875 567.3281,517.5313 Q568.6563,515.875 571.1563,515.875 Q571.8594,515.875 572.5,516.0313 Q573.1563,516.1875 573.7188,516.4844 L573.7188,519.2031 Q573.0938,518.625 572.5,518.3594 Q571.9063,518.0781 571.2813,518.0781 Q569.9375,518.0781 569.25,519.1563 Q568.5625,520.2188 568.5625,522.3125 Q568.5625,524.4063 569.25,525.4844 Q569.9375,526.5469 571.2813,526.5469 Q571.9063,526.5469 572.5,526.2813 Q573.0938,526 573.7188,525.4219 L573.7188,528.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="591.25" y="526.6543">Circle</text><line style="stroke:#A80036;stroke-width:1.5;" x1="438.5" x2="745.5" y1="538.5" y2="538.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="86" x="443.5" y="552.7104">-radius: double</text><line style="stroke:#A80036;stroke-width:1.5;" x1="438.5" x2="745.5" y1="559.3047" y2="559.3047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="49" x="443.5" y="573.5151">+Circle()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="443.5" y="586.3198">+Circle(radius: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="297" x="443.5" y="599.1245">+Circle(radius: double, color: String, filled: boolean)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="443.5" y="611.9292">+getRadius(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="155" x="443.5" y="624.7339">+setRadius(radius: double)</text><!--MD5=[b5313cd49da22b0744b541f414f8445e]
+class Rectangle--><rect codeLine="50" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="163.2422" id="Rectangle" style="stroke:#A80036;stroke-width:1.5;" width="420" x="782" y="487.5"/><ellipse cx="956.25" cy="503.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M959.2188,509.1406 Q958.6406,509.4375 958,509.5781 Q957.3594,509.7344 956.6563,509.7344 Q954.1563,509.7344 952.8281,508.0938 Q951.5156,506.4375 951.5156,503.3125 Q951.5156,500.1875 952.8281,498.5313 Q954.1563,496.875 956.6563,496.875 Q957.3594,496.875 958,497.0313 Q958.6563,497.1875 959.2188,497.4844 L959.2188,500.2031 Q958.5938,499.625 958,499.3594 Q957.4063,499.0781 956.7813,499.0781 Q955.4375,499.0781 954.75,500.1563 Q954.0625,501.2188 954.0625,503.3125 Q954.0625,505.4063 954.75,506.4844 Q955.4375,507.5469 956.7813,507.5469 Q957.4063,507.5469 958,507.2813 Q958.5938,507 959.2188,506.4219 L959.2188,509.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="63" x="976.75" y="507.6543">Rectangle</text><line style="stroke:#A80036;stroke-width:1.5;" x1="783" x2="1201" y1="519.5" y2="519.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="788" y="533.7104">-length: double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="788" y="546.5151">-height: double</text><line style="stroke:#A80036;stroke-width:1.5;" x1="783" x2="1201" y1="553.1094" y2="553.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="788" y="567.3198">+Rectangle()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="242" x="788" y="580.1245">+Rectangle(lenght: double, height: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="408" x="788" y="592.9292">+Rectangle(length: double, height: double, color: String, filled: boolean)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="788" y="605.7339">+getLength(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="154" x="788" y="618.5386">+setLength(length: double)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="788" y="631.3433">+getHeight(): double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="788" y="644.1479">+setHeight(height: double)</text><!--MD5=[5655ee3e2a0d028d03fe20f829576392]
+class Square--><rect codeLine="64" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="86.4141" id="Square" style="stroke:#A80036;stroke-width:1.5;" width="79" x="15.5" y="526"/><ellipse cx="31.4" cy="542" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M34.3688,547.6406 Q33.7906,547.9375 33.15,548.0781 Q32.5094,548.2344 31.8063,548.2344 Q29.3063,548.2344 27.9781,546.5938 Q26.6656,544.9375 26.6656,541.8125 Q26.6656,538.6875 27.9781,537.0313 Q29.3063,535.375 31.8063,535.375 Q32.5094,535.375 33.15,535.5313 Q33.8063,535.6875 34.3688,535.9844 L34.3688,538.7031 Q33.7438,538.125 33.15,537.8594 Q32.5563,537.5781 31.9313,537.5781 Q30.5875,537.5781 29.9,538.6563 Q29.2125,539.7188 29.2125,541.8125 Q29.2125,543.9063 29.9,544.9844 Q30.5875,546.0469 31.9313,546.0469 Q32.5563,546.0469 33.15,545.7813 Q33.7438,545.5 34.3688,544.9219 L34.3688,547.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="45.6" y="546.1543">Square</text><line style="stroke:#A80036;stroke-width:1.5;" x1="16.5" x2="93.5" y1="558" y2="558"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="35" x="21.5" y="572.2104">-sides</text><line style="stroke:#A80036;stroke-width:1.5;" x1="16.5" x2="93.5" y1="578.8047" y2="578.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="21.5" y="593.0151">+getSides()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="21.5" y="605.8198">+setSides()</text><!--MD5=[045cb46ea4a3fbf6012ad6e0114ba526]
+class Colorable--><rect codeLine="72" fill="#FEFECE" filter="url(#f8718q8d7jjf7)" height="60.8047" id="Colorable" style="stroke:#A80036;stroke-width:1.5;" width="96" x="7" y="245"/><ellipse cx="24.25" cy="261" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M20.1719,256.7656 L20.1719,254.6094 L27.5625,254.6094 L27.5625,256.7656 L25.0938,256.7656 L25.0938,264.8438 L27.5625,264.8438 L27.5625,267 L20.1719,267 L20.1719,264.8438 L22.6406,264.8438 L22.6406,256.7656 L20.1719,256.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="59" x="38.75" y="265.1543">Colorable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="102" y1="277" y2="277"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="102" y1="285" y2="285"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="84" x="13" y="299.2104">+howToColor()</text><!--MD5=[d4fe5b6edfdf8bc3393ff4e795f52650]
+reverse link java.lang.Comparable to GeometricObject--><path d="M435,122.46 C435,134.58 435,148.04 435,161.78 " fill="none" id="java.lang.Comparable-backto-GeometricObject" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="428,122.31,435,102.31,442,122.31,428,122.31" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d72c78752a635b9cb15e2b3637264783]
+reverse link GeometricObject to Triangle--><path d="M359.46,406.79 C351.35,420.79 343.12,434.98 335.08,448.84 " fill="none" id="GeometricObject-backto-Triangle" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="353.57,402.99,369.66,389.2,365.68,410.01,353.57,402.99" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3b994ff9eeda7c7f7f8edf75104d1417]
+reverse link GeometricObject to Circle--><path d="M505.33,407.08 C523.9,441.55 543.08,477.17 558.66,506.1 " fill="none" id="GeometricObject-backto-Circle" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="499.02,410.13,495.7,389.2,511.35,403.49,499.02,410.13" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4b6bd996fa6886e1c8b7ea8924c438e1]
+reverse link GeometricObject to Rectangle--><path d="M593.67,359.54 C670.25,399.62 761.78,447.51 837.77,487.28 " fill="none" id="GeometricObject-backto-Rectangle" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="590.03,365.53,575.55,350.06,596.52,353.13,590.03,365.53" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b0a11d5fb9483c7bb99fc2ee7ef2b71b]
+reverse link GeometricObject to Square--><path d="M275.83,336.75 C218.78,364.3 157.42,401.55 112,449 C91.33,470.6 76.92,501.1 67.76,525.81 " fill="none" id="GeometricObject-backto-Square" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="273.1,330.3,294.18,328.15,279.04,342.98,273.1,330.3" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[76b170b4cd1f16b8626199f2ceacd6c0]
+reverse link Colorable to Square--><path d="M55,326.12 C55,382.36 55,473.08 55,525.98 " fill="none" id="Colorable-backto-Square" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="48,326.05,55,306.05,62,326.05,48,326.05" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a30f8aefcb275362d2525b85fb813380]
+@startuml Exercise13_1-Exercise13_7
+
+skinparam ClassAttributeIconSize 0
+
+abstract GeometricObject implements java.lang.Comparable {
+    -color: String
+    -filled: boolean
+    -dateCreated: java.util.Date
+
+    #GeometricObject()
+    #GeometricObject(color: string, filled: boolean)
+    +getColor(): String 
+    +setColor(color: String): void
+    +isFIlled(): boolean
+    +setFilled(filled: boolean): void
+    +getDateCreated(): java.util.Date
+    +toString(): String 
+    {abstract} +getArea(): double
+    {abstract} +getPerimeter(): double
+    {static} +max(e: GeometricOnject, o: GeometricObject)
+
+
+}
+
+class Triangle extends GeometricObject {
+    -sideOne: double
+    -sideTwo: double
+    -sideThree: double
+
+    +Triangle()
+    +Triangle(sideOne: double, sideTwo: double,\n\tsideThree: double)
+    +Triangle(sideOne: double, sideTwo: double, \n\tsideThree: double, color: string,\n\tfilled: boolean)
+    +getSideOne(): double
+    +getSideTwo(): double
+    +getSideThree(): double
+    +setSideOne(sideOne: double)
+    +setSideTwo(sideTwo: double)
+    +setSideThree(sideThree: double)
+}
+
+Class Circle extends GeometricObject {
+    - radius: double
+
+    +Circle()
+    +Circle(radius: double)
+    +Circle(radius: double, color: String, filled: boolean)
+    +getRadius(): double
+    +setRadius(radius: double)
+
+}
+ Class Rectangle extends GeometricObject {
+     -length: double
+     -height: double
+
+     +Rectangle()
+     +Rectangle(lenght: double, height: double)
+     +Rectangle(length: double, height: double, color: String, filled: boolean)
+     +getLength(): double
+     +setLength(length: double)
+     +getHeight(): double
+     +setHeight(height: double)
+
+ }
+
+ class Square extends GeometricObject implements Colorable {
+     -sides 
+
+     +getSides()
+     +setSides()
+
+ }
+
+ interface Colorable {
+     {abstract} +howToColor()
+
+ }
+
+interface java.lang.Comparable {
+   +compareTo(o: GeometricObject): int
+}
+
+
+
+
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 01:36:27 PST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: CA
+--></g></svg>
