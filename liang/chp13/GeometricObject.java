@@ -1,18 +1,20 @@
-import javax.lang.model.util.ElementScanner14;
+
 
 /** chapter 13 Intro to Java by Liang Exercise 1 
  * 
- * 
- * Exercise13_1 - Creating abstract classes and abstract method implementation
- * Exercise13_5 - Enable GeometricObject comparable
- * Exercise13_6 - The ComparableCircle class
- *      - commented out class implementation of Comparabale
- *      - commented out max()
- *      - commented out overriden compareTo()
- * 
+ * <ol>
+ * <li>Exercise13_1 - Creating abstract classes and abstract method implementation
+ * <li>Exercise13_5 - Enable GeometricObject comparable
+ * <li>Exercise13_6 - The ComparableCircle class
+ *     <ul>
+ *          <li>commented out class implementation of Comparabale
+ *          <li>commented out max()
+ *          <li>commented out overriden compareTo()
+ *     </ul>
+ * </ol>
  * @author Cat Roman 2020-01-20
  * @see Triangle
- * @see Rectangle
+ * @see Circle
  * @see Circle
  * @see ComparableCircle
 */
@@ -73,6 +75,11 @@ public abstract class GeometricObject
     /** @return Returns the perimeter of an object dependant of its shape*/
     public abstract double getPerimeter();
       
+    /**Simplified toString 
+     * @return type of object i.e. Rectangle
+    */
+    public abstract String simpleString();
+
     /** compares to Geometric objects area 
      * @param o the object to be compared
      * @param e anothe object to be compared

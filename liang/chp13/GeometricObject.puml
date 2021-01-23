@@ -1,8 +1,8 @@
-@startuml Exercise13_1-Exercise13_7
+@startuml Exercise13_9 
 
 skinparam ClassAttributeIconSize 0
 
-abstract GeometricObject implements java.lang.Comparable {
+abstract GeometricObject {
     -color: String
     -filled: boolean
     -dateCreated: java.util.Date
@@ -15,9 +15,10 @@ abstract GeometricObject implements java.lang.Comparable {
     +setFilled(filled: boolean): void
     +getDateCreated(): java.util.Date
     +toString(): String 
+    {abstract} +simpleString(): String
     {abstract} +getArea(): double
     {abstract} +getPerimeter(): double
-    {static} +max(e: GeometricOnject, o: GeometricObject)
+    '{static} +max(e: GeometricOnject, o: GeometricObject)
 
 
 }
@@ -38,8 +39,8 @@ class Triangle extends GeometricObject {
     +setSideThree(sideThree: double)
 }
 
-Class Circle extends GeometricObject {
-    - radius: double
+Class Circle extends GeometricObject implements java.lang.Comparable {
+    - area: double
 
     +Circle()
     +Circle(radius: double)
@@ -48,7 +49,7 @@ Class Circle extends GeometricObject {
     +setRadius(radius: double)
 
 }
- Class Rectangle extends GeometricObject {
+ Class Rectangle extends GeometricObject implements java.lang.Comparable {
      -length: double
      -height: double
 
@@ -63,11 +64,20 @@ Class Circle extends GeometricObject {
  }
 
  class Square extends GeometricObject implements Colorable {
-     -sides 
+     -side: double 
 
-     +getSides()
-     +setSides()
+     +getSide(): double
+     +setSide(side: double)
 
+ }
+
+ class Octagon extends GeometricObject 
+ class Octagon implements java.lang.Comparable
+ class Octagon implements java.lang.Cloneable {
+     -side : double
+
+     +Octagon()
+     +Octagon(side: double)
  }
 
  interface Colorable {

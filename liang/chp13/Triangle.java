@@ -83,6 +83,13 @@ public class Triangle extends GeometricObject{
         this.sideThree = sideThree;
     } 
     
+     /**{@inheritDoc}
+    */
+    @Override
+    public String simpleString(){
+        return "Triangle";
+    }
+
     /** 
      *  {@inheritDoc}
      */

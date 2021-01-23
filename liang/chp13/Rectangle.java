@@ -1,12 +1,16 @@
 /**Chapter 13 Intro to Java by Liang Exercise 5 
  * 
- * Exercise13_5 - Enable GeometricObject comparability
+ * <ol>
+ *      <li>Exercise13_5 - Enable GeometricObject comparability
+ *      <li>Exercise13_9 - Enable Rectangle Comparable
+ * </ol>
  * 
  * @author Cat Roman 2020-01-20
  * 
  * @see GeometricObject
 */
-public class Rectangle extends GeometricObject{
+public class Rectangle extends GeometricObject 
+    implements Comparable<Rectangle> {
     private double length;
     private double height;
 
@@ -56,6 +60,13 @@ public class Rectangle extends GeometricObject{
         this.height = height;
     }
 
+     /**{@inheritDoc}
+    */
+    @Override
+    public String simpleString(){
+        return "Rectangle";
+    }
+
     /**The area is calculated in meters by the following formula
      * 
      * Area = length * height
@@ -63,6 +74,7 @@ public class Rectangle extends GeometricObject{
      * @see GeometricObject
      * @return area in meters
      */
+    @Override
     public double getArea(){
         return this.height * this.length;
     }
@@ -74,14 +86,41 @@ public class Rectangle extends GeometricObject{
      * @see GeometricObject
      * 
      */
+    @Override
     public double getPerimeter(){
         return (2 * this.height) + (2 * this.length);
     }
 
     /** {@inheritDoc} */
+    @Override
     public String toString(){
         return "Rectangle:\n\tHeigth: " + this.height + "\n\tLength: " 
                 + this.length + "\n" + super.toString();
     } 
 
+    /** compares area
+     * @return -1 if this.Rectangle area is less than compared rectangle
+     *          0 if equal
+     *          1 if this.rectangle are is greater than comppared rectangle
+     */
+    @Override
+    public int compareTo(Rectangle o){
+        if(this.getArea() > o.getArea())
+            return 1;
+        else if(this.getArea() < o.getArea())
+            return -1;
+        else
+            return 0;
+    }
+
+    /** compares objects Area
+     * @return equality
+    */
+    @Override
+    public boolean equals(Object o){
+        if(this.compareTo((Rectangle)o) == 0)
+            return true;
+
+        return false;
+    }
 }
