@@ -1,0 +1,49 @@
+@startuml LabOne 
+
+skinparam classAttributeIconSize 0
+
+class HousingApplicationFX {
+    -housing: LivingSpace[]
+}
+
+abstract LivingSpace {
+    # address: String 
+    # baths: double
+    # bedRooms: int 
+    # sqft: int 
+
+    +LivingSpace(address: String, baths: double, bedRoom: int, sqft: int) 
+    +setAddress(address: String)
+    +getAddress(): String
+    +setBaths(baths: double)
+    +getBaths(): double
+    +setBedRoomNum(BedRoom: int)
+    +setSqft(sqft: int)
+    +getSqft(): int
+    +toString(): String 
+}
+
+class Apartment extends LivingSpace {
+    - rentFee: int
+
+    +Apartmen(address:String, baths:double, bedRoom:int, sqft:int, rentFee: int)
+    +setRentFee(fee: iint)
+    +getRentFee(): int
+}
+
+class House extends LivingSpace {
+    - housePrice: String
+
+    +House(address:String, baths:double, bedRoom:int, sqft:int, housePrice: BigInteger)
+    +setPrice(price: String)
+    +getPrice(): BigInteger
+
+}
+
+class InvalidBathNumberException {
+    -message: String
+    
+    + InvalidBathNumberException(message: String)
+}
+
+@enduml
