@@ -1,7 +1,7 @@
 import java.util.regex.*;
 import java.util.Arrays;
 import java.lang.Exception;
-import java.util.ArrayList;
+import java.util.ArrayList; //change to container
 import java.io.IOException;
 import java.io.File;
 import java.util.Scanner;
@@ -21,9 +21,11 @@ public class RegexTester{
         }
         if(args.length >= 2){
             if(args[0].charAt(0) == '-'){
-                if(args[0].length() == 2)
+                //add each char condition to stack until no spacetoken
+                if(args[0].length() == 2) 
                         conditions(args[0].charAt(1), args);
                 else
+                    //create custom exception?
                     throw new Exception("condition \'" + args[0] + "\' not recognized");
             }else
                 searchString(args[0], message(1, args));
@@ -34,9 +36,11 @@ public class RegexTester{
         System.out.println(ex);
     }
     }
-    public static void conditions(char condition, String[] args)
+    //create conditionclass interface, create conditional class template
+    public static void conditions(char condition, String[] args) //turn to stack-array/container
         throws Exception{
         switch(condition){
+            //add conditional to match all methods
             case 'i': 
             {
                 searchString(args[1], message(2, args));
