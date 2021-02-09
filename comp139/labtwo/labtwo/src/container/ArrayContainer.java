@@ -16,7 +16,7 @@ public class ArrayContainer<T>
         private static final int MAX_CAPACITY = Integer.MAX_VALUE;
         /**Default capicty set with no parameter constructor */
         private static final int DEFAULT_CAPACITY = 100;
-
+        private int currentCapacity;
         /**Default constructor set to 
          * default capacity
          */
@@ -34,6 +34,7 @@ public class ArrayContainer<T>
                 throw new IllegalArgumentException("Must have positive inital capacity");
     
             container = (T[])(new Object[initialCapacity]);
+            currentCapacity = initialCapacity;
         }
 
         /** 
@@ -47,9 +48,11 @@ public class ArrayContainer<T>
             T[] temp;
             if(nextIndex == container.length){
                 if(container.length * 2 < MAX_CAPACITY)
-                    temp = (T[])(new Object[container.length * 2]);
+                    currentCapacity = container.length*2;
                 else
-                    temp = (T[])(new Object[MAX_CAPACITY]);
+                    currentCapacity = MAX_CAPACITY;
+
+                temp = (T[])(new Object[currentCapacity]);
                 
                 for(int i = 0; i < container.length; i++){
                     temp[i] = container[i];
@@ -66,7 +69,7 @@ public class ArrayContainer<T>
          */
         @Override
         public void clear(){
-            for(int i = nextIndex-1; i >0; i--)
+            for(int i = nextIndex-1; !isEmpty(); i--)
                 remove(container[i]);
         }
 
@@ -126,7 +129,7 @@ public class ArrayContainer<T>
                 throw new EmptyContainerException("Container is Empty");
             if(contains(element)){
                 T removed = container[indexOf(element)];
-                T[] tempContainer = (T[])(new Object[container.length - 1]);
+                T[] tempContainer = (T[])(new Object[currentCapacity]);
                 
                 //removes element at first element
                 if(indexOf(element) == 0)

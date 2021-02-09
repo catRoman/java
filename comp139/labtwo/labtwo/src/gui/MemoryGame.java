@@ -1,3 +1,4 @@
+package gui;
 /*
  * MemoryGame.java
  * This application uses an ArrayContainer object to store string names of 
