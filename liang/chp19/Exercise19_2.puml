@@ -1,0 +1,27 @@
+@startuml Exercise19_2
+
+skinparam classAttributeIconSize 0
+
+class ArrayList<E> {
+    +ArrayList()
+    +add(o: E): void
+    +add(index: int, o: E): void
+    +clear(): void
+    +contains(o: Object): boolean
+    +get(index: int): E
+    +indexOf(o: Object): int
+    +remove(o: Object): boolean
+    +Size(): int
+    +remove((index: int): boolean
+    +set(index: int, o: E): E
+    }
+
+class GenericStack2<E> extends ArrayList {
+    +GenericStack2()
+    +getSize(): int
+    +peek(): E
+    +pop(): E
+    +push(o: E): void
+    +isEmpty(): boolean
+}
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+
+skinparam ClassAttributeIconSize 0
+
+class Complex implements Cloneable, Comparable {
+    +Complex()
+    +Complex(a)
+    +Complex(a,b)
+    +getRealPart(): Double
+    +getImaginaryPart(): Double
+    +add(o: Complex): Complex
+    +subtract(o: Complex): Complex
+    +multiply(o: Complex): Complex
+    +divide(o: Complex): Complex
+    +abs(): Double
+    +toString(): String
+    +clone(): Complex
+    +compareTo(o: Complex): int
+
+}
+@enduml 

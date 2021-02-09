@@ -1,0 +1,30 @@
+Recursive humor -- https://en.wikipedia.org/wiki/Recursion
+
+Recursion is sometimes used humorously in computer science, programming, philosophy, or mathematics textbooks,
+generally by giving a circular definition or self-reference, in which the putative recursive step does not 
+get closer to a base case, but instead leads to an infinite regress. It is not unusual for such books to include
+a joke entry in their glossary along the lines of:
+
+
+    Recursion, see Recursion.[11]
+
+A variation is found on page 269 in the index of some editions of Brian Kernighan and Dennis Ritchie's book The C 
+Programming Language; the index entry recursively references itself ("recursion 86, 139, 141, 182, 202, 269"). 
+Early versions of this joke can be found in "Let's talk Lisp" by Laurent Siklóssy (published by Prentice Hall PTR 
+on December 1, 1975 with a copyright date of 1976) and in "Software Tools" by Kernighan and Plauger (published by 
+Addison-Wesley Professional on January 11, 1976). The joke also appears in "The UNIX Programming Environment" by 
+Kernighan and Pike. It did not appear in the first edition of The C Programming Language. The joke is part of the 
+Functional programming folklore and was already widespread in the functional programming community before the 
+publication of the aforementioned books.
+
+Another joke is that "To understand recursion, you must understand recursion."[11] In the English-language version 
+of the Google web search engine, when a search for "recursion" is made, the site suggests "Did you mean: recursion."[12] 
+An alternative form is the following, from Andrew Plotkin: "If you already know what recursion is, just remember 
+the answer. Otherwise, find someone who is standing closer to Douglas Hofstadter than you are; then ask him or 
+her what recursion is."
+
+Recursive acronyms are other examples of recursive humor. PHP, for example, stands for "PHP Hypertext Preprocessor", 
+WINE stands for "WINE Is Not an Emulator" GNU stands for "GNU's not Unix", and SPARQL denotes the "SPARQL Protocol 
+and RDF Query Language".
+
+ 

@@ -173,7 +173,7 @@ public class RegexTester{
         System.out.println("---------------------------------");
       while(dm.find()){
         for(int i =1; i <= dm.groupCount(); i++){
-            System.out.println(BLUE + i + RESET + ": " + dm.group(i) + " -> " + BLUE + dm.group(i).pattern() + RESET);
+            System.out.println(BLUE + i + RESET + ": " + dm.group(i) + " -> " + BLUE + dm.group(i) + RESET);
         }
     }
     }
