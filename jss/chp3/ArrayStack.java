@@ -1,3 +1,5 @@
+package chp3;
+
 /**ArrayStack implemntation using an array
  * Java software structures by lewis and chase
  */

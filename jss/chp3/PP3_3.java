@@ -1,3 +1,5 @@
+package chp3;
+
 import java.util.Scanner;
 /** Java Software structures by lewis and chase
  * 

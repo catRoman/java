@@ -1,3 +1,5 @@
+package chp3;
+
 public interface StackADT<T>{
     public void push(T element);
     public T pop();

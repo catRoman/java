@@ -1,3 +1,5 @@
+package chp3;
+
 import java.util.Arrays;
 
 public class DropOutStack<T> 

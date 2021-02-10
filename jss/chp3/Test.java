@@ -1,5 +1,8 @@
 package chp3;
 
+package chp3;
+
+
 /**Array stack using an array test program
  * 
  * Java Software structures by Lewis and Chase

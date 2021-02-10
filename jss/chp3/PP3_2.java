@@ -1,3 +1,5 @@
+package chp3;
+
 public class PP3_2{
     public static void main(String[] args){
         java.util.Scanner input = new java.util.Scanner(System.in);
