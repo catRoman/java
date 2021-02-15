@@ -1,4 +1,4 @@
-package chp3;
+package exceptions;
 
 /** An exception for Collection underflow 
  * 

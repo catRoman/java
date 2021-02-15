@@ -1,14 +1,12 @@
 package chp3;
 
-package chp3;
-
 
 /**Array stack using an array test program
  * 
  * Java Software structures by Lewis and Chase
  * Chapter 3
  */
-public class PP3_1{
+public class Test{
     /**Test Driver */
     public static void main(String[] args){
         ArrayStack<String> stackOne = new ArrayStack<>();
@@ -40,5 +38,6 @@ public class PP3_1{
         System.out.println("Exception attempt");
         System.out.println("peek: " + stackOne.peek());
     }
+    thisis a test;
 
 }

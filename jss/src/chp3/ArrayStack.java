@@ -1,5 +1,7 @@
 package chp3;
 
+import exceptions.EmptyCollectionException;
+
 /**ArrayStack implemntation using an array
  * Java software structures by lewis and chase
  */
