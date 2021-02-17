@@ -1,0 +1,59 @@
+@startuml DuckExample
+skinparam ClassAttributeIconSize 0
+duckTypes.Duck *-- behavior.FlyBehavior
+duckTypes.Duck *-- behavior.QuackBehavior
+
+abstract duckTypes.Duck {
+    - flyBehavior: FlyBehavior 
+    - quackBehavoir: QuackBehavior
+
+    + performFly(): void
+    + performQuack(): void
+    + swim(): void
+    + setFlyBehavior(FlyBehavior fb) : void
+    + setQuackBehavior(QuackBehavior qb): void
+}
+
+class duckTypes.DecoyDuck extends duckTypes.Duck {
+    + display() : void
+}
+class duckTypes.MallardDuck extends duckTypes.Duck {
+    + display() : void
+}
+class duckTypes.ModelDuck extends duckTypes.Duck {
+    + display() : void
+}
+class duckTypes.RedheadDuck extends duckTypes.Duck {
+    + display() : void
+}
+class duckTypes.RubberDuck extends duckTypes.Duck {
+    + display() : void
+}
+interface behavior.FlyBehavior {
+    + fly() : void
+}
+class behavoir.fly.FlyNoWay implements behavior.FlyBehavior {
+    + fly() : void
+}
+class behavoir.fly.FlyRocketPowered implements behavior.FlyBehavior {
+    + fly() : void
+}
+class behavoir.fly.FlyWithWings implements behavior.FlyBehavior {
+    + fly() : void
+}
+interface behavior.QuackBehavior {
+    + quack(): void
+}
+class behavior.quack.MuteQuack implements behavior.QuackBehavior {
+    + quack() : void
+}
+class behavior.quack.Quack implements behavior.QuackBehavior {
+    + quack() : void
+}
+class behavior.quack.Squeak implements behavior.QuackBehavior {
+    + quack() : void
+}
+class MiniDuckSimulator{
+    + static main(String[] args) : void
+}
+@enduml

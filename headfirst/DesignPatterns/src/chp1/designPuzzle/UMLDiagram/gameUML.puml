@@ -1,0 +1,40 @@
+@startuml
+skinparam ClassAttributeIconSize 0
+
+abstract characters.Character{
+    - weapon : WeaponBehavior
+    +figt(): void
+    +setWeapon(w : WeaponBehavior) : void
+} 
+class characters.Queen extends characters.Character {
+    +fight() : void
+}
+class characters.Troll extends characters.Character {
+    +fight() : void
+}
+class characters.King extends characters.Character {
+    +fight() : void
+}
+class characters.Knight extends characters.Character {
+    +fight() : void
+}
+interface behaviors.WeaponBehavior {
+    +useWeapon() : void
+}
+class behaviors.weaponBehaviors.AxeBehavior implements behaviors.WeaponBehavior {
+    +useWeapon()
+}
+class behaviors.weaponBehaviors.BowAndArrowBehavior implements behaviors.WeaponBehavior {
+    +useWeapon()
+}
+class behaviors.weaponBehaviors.KnifeBehavior implements behaviors.WeaponBehavior {
+    +useWeapon()
+}
+class behaviors.weaponBehaviors.SwordBehavior implements behaviors.WeaponBehavior {
+    +useWeapon()
+}
+class game {
+    +static main(args : String[]) : void
+}
+characters.Character *--  behaviors.weaponBehaviors
+@enduml
