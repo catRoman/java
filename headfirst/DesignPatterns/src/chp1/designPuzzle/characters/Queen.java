@@ -1,13 +1,15 @@
-package chp1.designPuzzle.character;
+package chp1.designPuzzle.characters;
 
-import chp1.designPuzzle.behaviors.WeaponBehavior;
+import chp1.designPuzzle.behaviors.weaponBehaviors.BowAndArrowBehavior;
 
 public class Queen extends Character{
-    @Override
-    public void setWeaponBehavior(WeaponBehavior weapon) {
-        super.setWeaponBehavior(weapon);
+
+    public Queen(int intitalHealth){
+        super(1000, intitalHealth);
+        setWeapon(new BowAndArrowBehavior());
     }
     public void fight(){
-        weapon.useWeapon();
+        super.fight();
+       System.out.println("It that time of the month... for some pain!");
     }
 }

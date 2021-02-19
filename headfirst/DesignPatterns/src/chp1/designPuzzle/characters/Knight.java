@@ -1,5 +1,16 @@
-package chp1.designPuzzle.character;
+package chp1.designPuzzle.characters;
 
-public class Knight {
+import chp1.designPuzzle.behaviors.weaponBehaviors.SwordBehavior;
+
+public class Knight extends Character{
+
+    public Knight(int intitalHealth){
+        super(750, intitalHealth);
+        setWeapon(new SwordBehavior());
+    }
+    public void fight(){
+
+       System.out.println("Im riding up to kick your ass!");
+    }
     
 }
