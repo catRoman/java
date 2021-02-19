@@ -2,7 +2,7 @@ package chp1.designPuzzle.characters;
 
 import chp1.designPuzzle.behaviors.weaponBehaviors.KnifeBehavior;
 
-public class King extends Character{
+public class King extends CharacterClass{
     public King(int intitalHealth){
         super(1000, intitalHealth);
         setWeapon(new KnifeBehavior());

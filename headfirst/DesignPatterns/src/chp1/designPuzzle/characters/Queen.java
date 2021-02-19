@@ -2,7 +2,7 @@ package chp1.designPuzzle.characters;
 
 import chp1.designPuzzle.behaviors.weaponBehaviors.BowAndArrowBehavior;
 
-public class Queen extends Character{
+public class Queen extends CharacterClass{
 
     public Queen(int intitalHealth){
         super(1000, intitalHealth);

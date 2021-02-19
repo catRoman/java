@@ -2,7 +2,7 @@ package chp1.designPuzzle.characters;
 
 import chp1.designPuzzle.behaviors.weaponBehaviors.SwordBehavior;
 
-public class Knight extends Character{
+public class Knight extends CharacterClass{
 
     public Knight(int intitalHealth){
         super(750, intitalHealth);

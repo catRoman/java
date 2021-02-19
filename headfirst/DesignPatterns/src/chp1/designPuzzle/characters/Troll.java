@@ -2,7 +2,7 @@ package chp1.designPuzzle.characters;
 
 import chp1.designPuzzle.behaviors.weaponBehaviors.AxeBehavior;
 
-public class Troll extends Character{
+public class Troll extends CharacterClass{
     
     public Troll(int intitalHealth){
         super(750, intitalHealth);
