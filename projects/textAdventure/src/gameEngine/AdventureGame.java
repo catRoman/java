@@ -32,6 +32,7 @@ public class AdventureGame {
 
         Actor playerOne = new Actor("player", "our intrepid explorer", livingRoom);
         GameLogic adventureGame = new GameLogic(playerOne);
+        plot.Intro.introScene();
         try{
            adventureGame.start();
         }catch(Exception ex){

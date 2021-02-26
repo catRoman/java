@@ -2,6 +2,7 @@ package chp3;
 
 import java.util.Arrays;
 import exceptions.EmptyCollectionException;
+import interfaces.StackADT;
 
 public class DropOutStack<T> 
     implements StackADT<T>{

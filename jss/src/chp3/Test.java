@@ -38,6 +38,6 @@ public class Test{
         System.out.println("Exception attempt");
         System.out.println("peek: " + stackOne.peek());
     }
-    thisis a test;
+    //thisis a test;
 
 }

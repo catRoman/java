@@ -5,8 +5,8 @@ public class Intro{
 	public Intro() {
 		
 	}
-//	public void introScene(){
-public static void main(String[] args){
+	public static void introScene(){
+//public static void main(String[] args){
 String introTitle = "" 
 +" .----------------.  .----------------.  .----------------. \n"                                                                                
 +"| .--------------. || .--------------. || .--------------. |\n"                                                                                

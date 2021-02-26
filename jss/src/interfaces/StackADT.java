@@ -1,4 +1,4 @@
-package chp3;
+package interfaces;
 
 public interface StackADT<T>{
     public void push(T element);
