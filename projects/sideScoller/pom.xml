@@ -125,11 +125,10 @@
 
 	<resources>
 		<resource>
-		  
-		  
 		  <directory>${basedir}/src/main/resources/shaders</directory>
 		  <includes>
-			<include>/default.glsl</include>
+			<include>default.glsl</include>
+			
 		  </includes>
 		</resource>
 	  </resources>
