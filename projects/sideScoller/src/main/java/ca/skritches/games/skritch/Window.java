@@ -6,6 +6,8 @@ import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
 
+import ca.skritches.games.util.Time;
+
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
@@ -16,19 +18,46 @@ public class Window {
    private int width, height;
    private String title;
    private long glfwWindow;
+  
    private static float r, g, b, a;
-
    private static Window window = null;
+   private static Scene currentScene = null;
 
     private Window() {
-        this.height = 1080;
-        this.width = 1920;
+        this.height = 768;
+        this.width = 1360;
         this.title = "Wheres Maya?";
         Window.r =1;
         Window.g = 1;
         Window.b = 1;
         Window.a = 1;
 
+    }
+    public static void changeScene(int newScene){
+        switch(newScene){
+            case 0:
+                currentScene = new LevelEditorScene();
+                currentScene.init();
+                break;
+            case 1:
+                currentScene = new LevelScene();
+                currentScene.init();
+                break;
+            case 2:
+                currentScene = new TestScene();
+                currentScene.init();
+                break;
+            default:
+                assert false : "unknown scene '" + newScene + "'";
+                break;
+        }
+    }
+    public static void setBackgroundColor(float r, float b, float g, float a){
+        Window.r = r;
+        Window.b = b;
+        Window.g = g;
+        Window.a = a;
+        
     }
 
     public static Window get(){
@@ -38,6 +67,7 @@ public class Window {
 
         return Window.window;
     }
+    
     public void run(){
         System.out.println("hello maya" + Version.getVersion() + "!");
 
@@ -82,6 +112,11 @@ public class Window {
         //Make the OpenGL context current
         glfwMakeContextCurrent(glfwWindow);
         // Enable v-sync
+        // cats note - matches FPS to monitor refresh rate
+        // a roughly uniform 60 fps +- 3; when set to 1 with minimal spikes
+        // maybe not when commented out i still get 60 fps
+        // will have to look into when i have better understanding
+        // feb26/21
         glfwSwapInterval(1);
 
         // Make the window visable
@@ -93,36 +128,30 @@ public class Window {
 		// creates the GLCapabilities instance and makes the OpenGL
 		// bindings available for use.
         GL.createCapabilities();
-
+        Window.changeScene(0);
     }
     public void loop(){
+        float beginTime = Time.getTime();
+        float endTime;
+        float dt = -1.0f;
+
         while(!glfwWindowShouldClose(glfwWindow)){
             //Poll events
             glfwPollEvents();
 
-            glClearColor(this.r, this.g, this.b, this.a);
+            glClearColor(Window.r, Window.g, Window.b, Window.a);
             glClear(GL_COLOR_BUFFER_BIT);
 
-          
+            if(dt >= 0)
+                currentScene.update(dt);
 
-            
-            if(KeyListener.isKeyPressed(GLFW_KEY_SPACE)){
-                System.out.println("Space key is pressed");
-                Window.setColorFade(0,0,0,0);
-            }
-            if(MouseListener.mouseButtonDown(1)){
-                System.out.println("Button one was pressed");
-                Window.setColorFade(0,0,1,0);
-            }
 
             glfwSwapBuffers(glfwWindow);
+
+            endTime = Time.getTime();
+            dt = endTime - beginTime;
+            beginTime = endTime;
         }
-    }
-    public static void setColorFade(float r, float g, float b, float a){
-               Window.r = Math.max(Window.r - 0.01f, r);
-               Window.g = Math.max(Window.g - 0.01f, g);
-               Window.b = Math.max(Window.b - 0.01f, b);
-               Window.a = Math.max(Window.a - 0.01f, a);
     }
 }
 
