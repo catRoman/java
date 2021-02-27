@@ -1,0 +1,19 @@
+digraph "ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" { 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-assimp:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-glfw:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-nfd:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-openal:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-opengl:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-stb:jar:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-assimp:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-glfw:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-nfd:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-openal:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-opengl:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.lwjgl:lwjgl-stb:jar:natives-linux:3.2.3:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "org.joml:joml:jar:1.10.0:compile" ; 
+	"ca.skritches.games:sideScoller:jar:1.0-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+ } 
