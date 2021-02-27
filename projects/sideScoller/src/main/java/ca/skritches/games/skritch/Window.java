@@ -16,7 +16,7 @@ public class Window {
    private int width, height;
    private String title;
    private long glfwWindow;
-   private float r, g, b, a;
+   private static float r, g, b, a;
 
    private static Window window = null;
 
@@ -24,10 +24,10 @@ public class Window {
         this.height = 1080;
         this.width = 1920;
         this.title = "Wheres Maya?";
-        this.r =1;
-        this.g = 1;
-        this.b = 1;
-        this.a = 1;
+        Window.r =1;
+        Window.g = 1;
+        Window.b = 1;
+        Window.a = 1;
 
     }
 
@@ -108,21 +108,21 @@ public class Window {
             
             if(KeyListener.isKeyPressed(GLFW_KEY_SPACE)){
                 System.out.println("Space key is pressed");
-                setColorFade(0,0,0,0);
+                Window.setColorFade(0,0,0,0);
             }
             if(MouseListener.mouseButtonDown(1)){
                 System.out.println("Button one was pressed");
-                setColorFade(2,2,2,2);
+                Window.setColorFade(0,0,1,0);
             }
 
             glfwSwapBuffers(glfwWindow);
         }
     }
-    public void setColorFade(float r, float g, float b, float a){
-                this.r = Math.max(this.r - 0.01f, r);
-                this.g = Math.max(this.g - 0.01f, g);
-                this.b = Math.max(this.b - 0.01f, b);
-                this.a = Math.max(this.a - 0.01f, a);
+    public static void setColorFade(float r, float g, float b, float a){
+               Window.r = Math.max(Window.r - 0.01f, r);
+               Window.g = Math.max(Window.g - 0.01f, g);
+               Window.b = Math.max(Window.b - 0.01f, b);
+               Window.a = Math.max(Window.a - 0.01f, a);
     }
 }
 
