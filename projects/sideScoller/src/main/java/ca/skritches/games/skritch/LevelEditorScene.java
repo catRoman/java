@@ -22,10 +22,10 @@ public class LevelEditorScene extends Scene{
 
     private float[] vertexArray = {
         // position                   //color                       //uv coordinates  
-         100.5f,    0.5f, 0.0f,       1.0f, 0.0f, 0.0f, 1.0f,       1, 0, // 0 Bottom right
-           0.5f,  100.5f, 0.0f,       0.0f, 1.0f, 0.0f, 1.0f,       0, 1, // 1 top left
-         100.5f,  100.5f, 0.0f,       0.0f, 0.0f, 1.0f, 1.0f,       1, 1, // 2 top right
-           0.5f,    0.5f, 0.0f,       1.0f, 1.0f, 0.0f, 1.0f,       0, 0, // 3 bottom left
+         100.5f,    0.5f, 0.0f,       1.0f, 0.0f, 0.0f, 1.0f,       1, 1, // 0 Bottom right
+           0.5f,  100.5f, 0.0f,       0.0f, 1.0f, 0.0f, 1.0f,       0, 0, // 1 top left
+         100.5f,  100.5f, 0.0f,       0.0f, 0.0f, 1.0f, 1.0f,       1, 0, // 2 top right
+           0.5f,    0.5f, 0.0f,       1.0f, 1.0f, 0.0f, 1.0f,       0, 1, // 3 bottom left
     };
 
     //IMPORTANT: Must be in counter clockwise order
@@ -48,10 +48,11 @@ public class LevelEditorScene extends Scene{
 
     @Override
     public void init(){
+        Window.setBackgroundColor(0, 0, 0, 0);
         this.camera = new Camera(new Vector2f());
         defaultShader = new Shader("/default.glsl");
         defaultShader.complieAndLink();
-        this.testTexture = new Texture("/maya.png");
+        this.testTexture = new Texture("src/main/resources/maya2.png");
 
 
         //=============================================
@@ -98,7 +99,7 @@ public class LevelEditorScene extends Scene{
     @Override
     public void update(float dt){
         camera.position.x -= dt * 50.0f;
-        camera.position.y -= dt * 50.0f;
+       // camera.position.y -= dt * 50.0f;
         
        defaultShader.use();
 

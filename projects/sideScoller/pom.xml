@@ -125,10 +125,10 @@
 
 	<resources>
 		<resource>
-		  <directory>${basedir}/src/main/resources/shaders</directory>
+		  <directory>${basedir}/src/main/resources</directory>
 		  <includes>
 			<include>default.glsl</include>
-			
+			<include>maya2.png</include>
 		  </includes>
 		</resource>
 	  </resources>

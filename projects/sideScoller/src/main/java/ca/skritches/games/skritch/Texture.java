@@ -37,9 +37,15 @@ public class Texture {
         ByteBuffer image = stbi_load(filePath, width, height, channel, 0);
 
         if(image != null){
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width.get(0), height.get(0),
-                        0, GL_RGBA, GL_UNSIGNED_BYTE, image);
-
+            if(channel.get(0) == 3){
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width.get(0), height.get(0),
+                            0, GL_RGB, GL_UNSIGNED_BYTE, image);
+            }else if(channel.get(0)==4){
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width.get(0), height.get(0),
+                            0, GL_RGBA, GL_UNSIGNED_BYTE, image);
+            }else{
+                assert false: "Error: (Texture) Unknown mumber of channels '" + channel.get(0) + "'";
+            }
         }else {
             assert false : "Error: (Texture) Could not load image '" + filePath + "'";
 
