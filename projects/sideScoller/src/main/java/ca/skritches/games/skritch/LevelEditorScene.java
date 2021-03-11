@@ -8,7 +8,9 @@ import java.nio.IntBuffer;
 import org.joml.Vector2f;
 import org.lwjgl.BufferUtils;
 
+import ca.skritches.games.components.SpriteRenderer;
 import ca.skritches.games.renderer.Shader;
+import ca.skritches.games.renderer.Texture;
 import ca.skritches.games.util.Time;
 
 import static org.lwjgl.opengl.ARBVertexArrayObject.*;
@@ -19,6 +21,9 @@ public class LevelEditorScene extends Scene{
     private Shader defaultShader;
     private int vaoID, vboID, eboID;
     private Texture testTexture;
+    
+    GameObject testObj;
+    private boolean firstTime = false;
 
     private float[] vertexArray = {
         // position                   //color                       //uv coordinates  
@@ -48,6 +53,12 @@ public class LevelEditorScene extends Scene{
 
     @Override
     public void init(){
+        System.out.println("Creating test Object");
+        this.testObj = new GameObject("test Object");
+        this.testObj.addComponent(new SpriteRenderer());
+        this.addGameObjectsToScene(this.testObj);
+        
+
         Window.setBackgroundColor(0, 0, 0, 0);
         this.camera = new Camera(new Vector2f());
         defaultShader = new Shader("/default.glsl");
@@ -85,8 +96,6 @@ public class LevelEditorScene extends Scene{
         int colorSize = 4;
         int uvSize = 2;
         int vertexSizeBytes = (positionSize + colorSize + uvSize) * Float.BYTES;
-        glVertexAttribPointer(0, positionSize, GL_FLOAT, false, vertexSizeBytes, 0);
-        glEnableVertexAttribArray(0);
 
         glVertexAttribPointer(1, colorSize, GL_FLOAT, false, vertexSizeBytes, positionSize * Float.BYTES);
         glEnableVertexAttribArray(1);
@@ -129,6 +138,17 @@ public class LevelEditorScene extends Scene{
 
        defaultShader.detach();
 
+       if(!firstTime){
+           System.out.println("Creating gameObject  bottom");
+            GameObject go = new GameObject("Game Test 2");
+            go.addComponent(new SpriteRenderer());
+            this.addGameObjectsToScene(go);
+            firstTime = true;
+       }
+
+       for(GameObject go : this.gameObjects){
+           go.update(dt);
+       }
     }
     
 }

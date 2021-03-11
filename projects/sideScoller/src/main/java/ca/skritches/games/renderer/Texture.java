@@ -1,4 +1,4 @@
-package ca.skritches.games.skritch;
+package ca.skritches.games.renderer;
 
 import static org.lwjgl.opengl.GL11.glGenTextures;
 
